@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+html {
+    background-color: #242424;
+    padding-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 800px;
+    margin: 0 auto;
+}
+
+a {
+    position: relative;
+    float: left;
+    width: 350px;
+    height: 210px;
+    overflow: visible;
+    margin: 20px;
+    display: block;
+    background-color: #000;
+    text-decoration: none;
+}
+
+a div {
+    position: relative;
+    z-index: 1;
+    width: 358px;
+    height: 218px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    overflow: hidden;
+
+    -webkit-box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+
+    -webkit-transform: translate(-4px,-4px);
+    -moz-transform:    translate(-4px,-4px);
+    -ms-transform:     translate(-4px,-4px);
+    -o-transform:      translate(-4px,-4px);
+    transform:         translate(-4px,-4px);
+
+    -webkit-transition: width .2s, height .2s, -webkit-transform .2s, -webkit-box-shadow .2s;
+    -moz-transition:  width .2s, height .2s, -moz-transform .2s, box-shadow .2s;
+    transition:  width .2s, height .2s, transform .2s, box-shadow .2s;
+}
+a div:before {
+    content: "";
+    display: block;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0) 60%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.9)), color-stop(20%,rgba(0,0,0,0.85)), color-stop(60%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.85) 20%,rgba(0,0,0,0) 60%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.85) 20%,rgba(0,0,0,0) 60%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.85) 20%,rgba(0,0,0,0) 60%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.85) 20%,rgba(0,0,0,0) 60%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+a:hover div:before {
+    opacity: 0.7;
+}
+
+a:hover div {
+    width: 366px;
+    height: 226px;
+
+    -webkit-box-shadow: 0 0 3px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0 3px 4px rgba(0,0,0,0.2);
+
+    -webkit-transform: translate(-8px,-8px);
+    -moz-transform:    translate(-8px,-8px);
+    -ms-transform:     translate(-8px,-8px);
+    -o-transform:      translate(-8px,-8px);
+    transform:         translate(-8px,-8px);
+}
+
+a:active div {
+    width: 358px;
+    height: 218px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transform: translate(-4px,-4px);
+    -moz-transform:    translate(-4px,-4px);
+    -ms-transform:     translate(-4px,-4px);
+    -o-transform:      translate(-4px,-4px);
+    transform:         translate(-4px,-4px);
+}
+
+a span {
+    position: absolute;
+    display: block;
+    overflow:hidden;
+    z-index: 20;
+    padding: 15px 20px;
+    bottom: 0px;
+    left: 0;
+}
+
+a span h3 {
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+a:hover span h3 {
+
+}
+a span p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+    opacity: 0;
+    max-height: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+a:hover span p {
+    opacity: 1;
+    max-height: 200px;
+}
