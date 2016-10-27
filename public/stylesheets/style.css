@@ -1,21 +1,21 @@
-.card .card-image img {
+#closet div ul div div div .card .card-image img {
     height: 30vw;
     width: 30vw;
 }
 
-.row {
+#closet div ul div .row {
     border: 0 !important;
     margin: 0.2vw !important;
     padding: 0 !important;
 }
 
-.col {
+#closet div ul div div .col {
     border: 0 !important;
     margin: 0.2vw !important;
     padding: 0 !important;
 }
 
-.card {
+#closet div ul div div div .card {
     border: 0 !important;
     margin: 0.2vw !important;
     padding: 0 !important;
