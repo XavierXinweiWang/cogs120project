@@ -57,23 +57,130 @@
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-2" id="toolbar">
-            <a href="#overview" class="mdl-layout__tab is-active">Saved Looks</a>
-            <a href="#faq" class="mdl-layout__tab">All Clothes</a>
+            <a href="#history" class="mdl-layout__tab is-active">Saved Looks</a>
+            <a href="#closet" class="mdl-layout__tab">All Clothes</a>
         </div>
     </header>
     <main class="mdl-layout__content">
-        <div class="mdl-layout__tab-panel is-active" id="overview">
-            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                <!--
-                <div class="wrap">
-                    <a href="/storage" title=""><div style="background-image: url(http://static.pexels.com/wp-content/uploads/2015/01/car-interior-oldtimer-4178-526x350.jpeg);"></div><span><h3>Storage</h3><p>Aliquam egestas tortor vel libero pulvinar, ut iaculis leo facilisis. Praesent pretium mattis dapibus.</p></span></a>
-                    <a href="/storage" title=""><div style="background-image: url(http://static.pexels.com/wp-content/uploads/2015/01/fashion-put-on-shoes-4180-525x350.jpeg);"></div><span><h3>Storage</h3><p>Aliquam egestas tortor vel libero pulvinar, ut iaculis leo facilisis. Praesent pretium mattis dapibus.</p></span></a>
-                    <a href="/storage" title=""><div style="background-image: url(http://static.pexels.com/wp-content/uploads/2015/01/dawn-dust-holiday-4115-622x350.jpeg);"></div><span><h3>Storage</h3><p>Aliquam egestas tortor vel libero pulvinar, ut iaculis leo facilisis. Praesent pretium mattis dapibus.</p></span></a>
-                    <a href="/storage" title=""><div style="background-image: url(http://static.pexels.com/wp-content/uploads/2015/01/apple-business-coffee-4159-525x350.jpg);"></div><span><h3>Storage</h3><p>Aliquam egestas tortor vel libero pulvinar, ut iaculis leo facilisis. Praesent pretium mattis dapibus.</p></span></a>
-                </div>-->
-            </section>
+        <div class="mdl-layout__tab-panel is-active" id="history">
+
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-card mdl-cell--12-col">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col" id="form">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col l6 m6 s6">
+                                            <img src="images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg" class="fakeitem1">
+                                        </div>
+
+                                        <div class="input-field col l6 m6 s6">
+                                            <p>White Shirt, Blue Chino</p>
+                                            <p><img class="icon icons8-Clock" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAABZZJREFUaAXdmkuI1lUYxkczNSOHCNKREiltNoGgkVDtAzdFC7OLwawqdFurWgyIQWRK0KJ7ubCMFpVEurCFVAupFLeifI05g3YxEkxCp57f1/fOvP/znfO/fzPRA0/n9r7P+xy//+X8hxYMtY8VklwnjoireqQPpsTJHumfEs+L/ykslJtN4k7xhDgt/l2SxJJDLhpozRuWqvIO8YxYdgNFcWihifac4TpVGhPPikUG665P9GpQa6C4R+rfiXWNVs2jFjVbxyIpjotXxaqmmsZTk9p4aAXDUjksljH2h+KOiLvEh8SV4nHRcnkArBUfE3eLR8VLoq3ntXjASyMsV/YxMa8Qa8Q8Ll4vhvhIE5ZPP8RiTWwTfxAtLtVSB0+1wE98SEyJM39afETMwxotvtkj/RQWaGGr2BHzauKp1uW3J0eY6/oV8QaxbSyT4F7xmpjaGN4qYYuiU2K/ae3BSmr/XoqxyzFPZrMWL4opH3gshdWKSgld0NrdpVRmg25Xl/sD0q+C9Qr+WYxtCo94LUTqvrmsTI4nVfG8EszQc1WTFX+f+KfTMC1avObiUa36BN9/Kjczvcg7xHReTIflrow5DdOyFs9RLNFsR7RA374XzSg3+arTfKlcSjRqn9Px3jqax3sftmvGB1r/J80P90WXn3jb6b5WPq0vEg/nnJb5o8V7BhwCOen6IOvzbmiCA0o2rXeaCCmXE4Zp+RbvmYMsj0gfYH2eTLzwmuBLJZveh02ElIsXPJmeb9nDzAfVkwwieFlzJDXBTS75Rtev08ULnmKY2QPHiN9Fv1v6v4ics5ripARM+0hTMeXjKfZuYg+L+OTdIMZu+s81/5fYFMudwDLXr9vFE95CsIcNbGhjuNIbf5WYrzrd5iVntVPeNrKhUYsKWr5dmoLzm/+Fbta41kk5MJLyNsqGRoJgG/5onZotm/lE9Bu4TWO+iaoeVJWSwURmNDvo7uULje2m9e1xzfMds0asA85tXs/3Od/VwWolvS/izetZn70MHUwsWlDsK5O8InytANMI22+KkhPr3+doUuMgl9ygcDVHmCfr/TnrqSVO3YWYj0uOf03ec3cVussG8C22X8y95PxZy18a/nGblS03Wqqwk6LXDPuntX5rOblMFN5CLcYHuOSmMqGzA27AJriiZC4rvle4DyfFEHdognu46gs35a27l2clGNvtE2H1huNblP9totZnms+clgtq4S3mmb0M3ZtYbHrURzsEvwTHlpiZ18PgnDHeYhrspfviix1OOQAuJqBl8KJ9S4wZKvN+wlPycGpe9ycKNP24M/1YOx6pOa25opqsx/4x2MMMNqsXC2rjA2+mSKTztOZ4X/naPEweiMQyVfiBZ3l5n+B89g4SD0v8sug3xaskhtKf4CRvF72o9c9pnm+NQYLH+6+i1XwhUgwPeLEY3+K9D0s00xF9oPX39UW3PzEqyTfEZ0S8hMCD+fFtR/Ox+G4+L0Ef7Ptj3Yj5+Q+1vRffx3MuDmnVJ1ifgyF/lp1rUJPa5sO3eC0Ex4qLok+0Ps//9YUK7QVQK/bOwQ8eU0egPgdbNGObCFuEeMwPGtSgVljfxnishD2KtuSwvaa1vSJHmbaBJtrUCOvaGG+VwREldT+ZcEcxW0VeeCms1MK74gfinakgzaOBVkc0/ViLJ/93Cg3Lg7/YHBNjwn6OE8U2MXb2+9Tlf6x+CHLIRcNrxvp4wVMjDCv7sBgrEM5dUtxRcbfIW32teEK0OPrMsUYMseTYel6LB7y0An7icTE8d+UZaGuNmtSufZkpN4n/zf8a43fIQXZMPCu29SuEOhO9GtSaM/BHkB3iGTE0VHeMFppozxsWqvImcafITT8tlt0QseSQiwZajcCzv22skOA6cURc1SN9MCVO9kj/lHhebA3/ABC+abPfYNQxAAAAAElFTkSuQmCC" width="15" height="15"> Today</p>
+                                            <p><img class="icon icons8-Hearts" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAnxJREFUaAXtmc9LFVEcxc1KNHLRJjGhVuaipQsT3dh/EdQiyG3/QS0qWugyCd2IqyDSfejWFhGB7dpkq0eC4E6iQutz4Akz8+517rw3b+Y7cA8cZu7M98c53+t7zBsHBiLiBOIE4gTiBBo0gYs9aL1K7i14E/6Dv9pHDoUxSMZ1OAlH4Z82OfQPI5R+ANfhdygTSR6x3oAzMBSK3YDKTdbSuXqol3qqd2nQ9B7BFsw29a23ib0NfZjixg705Wevq7c0SEtPuEb2B5htELI+Ju+xo/si13QvpEY2RlqkqSsMk/UJZosWXa9S41KbayXUkyZpK4w3ZBQV74t/R633JdaTtkJYIPoU+gTWfV3apDEIF4j6AusWnddfGqU1F/eIyCtm5b60puD6GryfirC9CNL6DQ9WdiBPh7Sm4Pob1GPH5VSU3cVfpA0l5bkMaSpNQsqD6zOkHWoKOrS6DB02xQ06O7S6DHV80Awb7NDqMvTRsIGstCCt02TlfV1auS+tQfhKlBXRPh17QU7aQQ8bYEi/ZIOhdw2Wd0naCr8PmSfpBPq2vK7r0jQHu8IyWXUJ9/WVpq6h56Rd6Cte9XVpST27deNsjKR9A6akQVpKgV5JHcCqd+Ssn3pPluIkUeQO53WY+klf9e4LtFM/4Nnk+n1Ur9J3JjuZcS58rsCUeqhXJbhCl7ewXzuk2upROZ7Q8Tcsy5hqqWatuEv3FuzVlGrM1uok0fwG5728B1euapjCCGq2YNGd2iRHuSahX8ArMNTUa2Jdv5rNmXsRYOq5OdU5gp6dY+ppTq7Z268cpl6aVRsobJk4/T9HXArMMR82gUIxIk4gTiBOoNoJ/AcXaW1t81Nz9QAAAABJRU5ErkJggg==" width="15" height="15"> 42 likes</p>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="collapsible-body"><p>This is a super convenient trip planner. All you need to do is to tell us how tight your schedule is, what you want to do before leaving, and your preferred transportation options. We will handle the rest of the work for you!</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="collapsible-header">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-card mdl-cell--12-col">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col" id="form">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col l6 m6 s6">
+                                            <img src="images/2878289015_6_1_1.jpg" class="fakeitem1">
+                                        </div>
+
+                                        <div class="input-field col l6 m6 s6">
+                                            <p>White Shirt, Blue Chino</p>
+                                            <p><img class="icon icons8-Clock" src="data:image/png;base64,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" width="15" height="15"> Today</p>
+                                            <p><img class="icon icons8-Hearts" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAnxJREFUaAXtmc9LFVEcxc1KNHLRJjGhVuaipQsT3dh/EdQiyG3/QS0qWugyCd2IqyDSfejWFhGB7dpkq0eC4E6iQutz4Akz8+517rw3b+Y7cA8cZu7M98c53+t7zBsHBiLiBOIE4gTiBBo0gYs9aL1K7i14E/6Dv9pHDoUxSMZ1OAlH4Z82OfQPI5R+ANfhdygTSR6x3oAzMBSK3YDKTdbSuXqol3qqd2nQ9B7BFsw29a23ib0NfZjixg705Wevq7c0SEtPuEb2B5htELI+Ju+xo/si13QvpEY2RlqkqSsMk/UJZosWXa9S41KbayXUkyZpK4w3ZBQV74t/R633JdaTtkJYIPoU+gTWfV3apDEIF4j6AusWnddfGqU1F/eIyCtm5b60puD6GryfirC9CNL6DQ9WdiBPh7Sm4Pob1GPH5VSU3cVfpA0l5bkMaSpNQsqD6zOkHWoKOrS6DB02xQ06O7S6DHV80Awb7NDqMvTRsIGstCCt02TlfV1auS+tQfhKlBXRPh17QU7aQQ8bYEi/ZIOhdw2Wd0naCr8PmSfpBPq2vK7r0jQHu8IyWXUJ9/WVpq6h56Rd6Cte9XVpST27deNsjKR9A6akQVpKgV5JHcCqd+Ssn3pPluIkUeQO53WY+klf9e4LtFM/4Nnk+n1Ur9J3JjuZcS58rsCUeqhXJbhCl7ewXzuk2upROZ7Q8Tcsy5hqqWatuEv3FuzVlGrM1uok0fwG5728B1euapjCCGq2YNGd2iRHuSahX8ArMNTUa2Jdv5rNmXsRYOq5OdU5gp6dY+ppTq7Z268cpl6aVRsobJk4/T9HXArMMR82gUIxIk4gTiBOoNoJ/AcXaW1t81Nz9QAAAABJRU5ErkJggg==" width="15" height="15"> 42 likes</p>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="collapsible-body">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-card mdl-cell--12-col">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col l3 m3 s3">
+                                            <img src="images/2878289015_6_1_1.jpg" class="fakeitem2">
+                                        </div>
+
+                                        <div class="input-field col l3 m3 s3">
+                                            <img src="images/2878289015_6_1_1.jpg" class="fakeitem2">
+                                        </div>
+
+
+
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </li>
+
+            <li>
+                <div class="collapsible-header">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-card mdl-cell--12-col">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col" id="form">
+                                <form class="col s12">
+
+                                    <div class="row">
+                                        <div class="input-field col l6 m6 s6">
+                                            <img src="images/4644272507_6_1_1.jpg" class="fakeitem1">
+                                        </div>
+
+                                        <div class="input-field col l6 m6 s6">
+                                            <p>White Shirt, Blue Chino</p>
+                                            <p><img class="icon icons8-Clock" src="data:image/png;base64,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" width="15" height="15"> Today</p>
+                                            <p><img class="icon icons8-Hearts" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAnxJREFUaAXtmc9LFVEcxc1KNHLRJjGhVuaipQsT3dh/EdQiyG3/QS0qWugyCd2IqyDSfejWFhGB7dpkq0eC4E6iQutz4Akz8+517rw3b+Y7cA8cZu7M98c53+t7zBsHBiLiBOIE4gTiBBo0gYs9aL1K7i14E/6Dv9pHDoUxSMZ1OAlH4Z82OfQPI5R+ANfhdygTSR6x3oAzMBSK3YDKTdbSuXqol3qqd2nQ9B7BFsw29a23ib0NfZjixg705Wevq7c0SEtPuEb2B5htELI+Ju+xo/si13QvpEY2RlqkqSsMk/UJZosWXa9S41KbayXUkyZpK4w3ZBQV74t/R633JdaTtkJYIPoU+gTWfV3apDEIF4j6AusWnddfGqU1F/eIyCtm5b60puD6GryfirC9CNL6DQ9WdiBPh7Sm4Pob1GPH5VSU3cVfpA0l5bkMaSpNQsqD6zOkHWoKOrS6DB02xQ06O7S6DHV80Awb7NDqMvTRsIGstCCt02TlfV1auS+tQfhKlBXRPh17QU7aQQ8bYEi/ZIOhdw2Wd0naCr8PmSfpBPq2vK7r0jQHu8IyWXUJ9/WVpq6h56Rd6Cte9XVpST27deNsjKR9A6akQVpKgV5JHcCqd+Ssn3pPluIkUeQO53WY+klf9e4LtFM/4Nnk+n1Ur9J3JjuZcS58rsCUeqhXJbhCl7ewXzuk2upROZ7Q8Tcsy5hqqWatuEv3FuzVlGrM1uok0fwG5728B1euapjCCGq2YNGd2iRHuSahX8ArMNTUa2Jdv5rNmXsRYOq5OdU5gp6dY+ppTq7Z268cpl6aVRsobJk4/T9HXArMMR82gUIxIk4gTiBOoNoJ/AcXaW1t81Nz9QAAAABJRU5ErkJggg==" width="15" height="15"> 42 likes</p>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="collapsible-body"><p>This is a super convenient trip planner. All you need to do is to tell us how tight your schedule is, what you want to do before leaving, and your preferred transportation options. We will handle the rest of the work for you!</p>
+                </div>
+            </li>
+        </ul>
+
+
         </div>
+
+
+        <div class="mdl-layout__tab-panel is-active" id="closet"></div>
+
     </main>
 </div>
 </body>
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 </html>
