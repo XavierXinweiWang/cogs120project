@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET storage page. */
-router.get('/storage', function(req, res, next) {
+router.get('/compare', function(req, res, next) {
   res.render('storage', { title: 'Express' });
 });
 

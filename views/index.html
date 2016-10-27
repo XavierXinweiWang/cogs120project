@@ -43,8 +43,6 @@
     <script type="text/javascript" src="javascripts/materialize.min.js"></script>
     <script type="text/javascript" src="javascripts/select2.min.js"></script>
 
-
-    <!--<link rel="stylesheet" href="stylesheets/index.css">-->
 </head>
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -56,10 +54,13 @@
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-2" id="toolbar">
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-3" id="toolbar">
             <a href="#history" class="mdl-layout__tab is-active">Saved Looks</a>
             <a href="#closet" class="mdl-layout__tab">All Clothes</a>
+            <a href="#explore" class="mdl-layout__tab">Explore</a>
+            <a href="/compare" class=" mdl-layout__tab"><i class="material-icons" style="padding-top: 5vw">camera_alt</i></a>
         </div>
+
     </header>
     <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="history">
@@ -233,14 +234,181 @@
         </div>
 
 
-        <div class="mdl-layout__tab-panel is-active" id="closet"></div>
+        <div class="mdl-layout__tab-panel" id="closet">
+            <div id="top">
+                <h5>Top</h5>
+                <!-- Flat button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect more">
+                    MORE
+                </button>
+                <ul class="top list">
+                    <div class="demo-grid-ruler mdl-grid ">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/tee-sun01-1000x1000.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/5252206400_6_1_1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/BomberFORESTsmall-1000x1000.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/4644272507_6_1_1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/vmo9g0yjsxsfcnlmmlxtrfcwyothw4n0.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/1255267800_6_1_1.jpg">
+                                        <!---<div class="image more">
+                                            <p>
+                                                MORE
+                                                <i class="material-icons">keyboard_arrow_right</i>
+                                            </p>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+
+            <div id="bottom">
+                <h5>Bottom</h5>
+                <!-- Flat button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect more">
+                    MORE
+                </button>
+                <ul class="bottom list">
+                    <div class="demo-grid-ruler mdl-grid">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/ORLEBAR_BROWN_BULLDOG_MOUNTAIN_FOREST_MIST_GREY_263554_FRONT_L.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/coralfront-1000x1000.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+
+            <div id="one-piece">
+                <h5>One Piece</h5>
+                <!-- Flat button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect more">
+                    MORE
+                </button>
+                <ul class="one-piece list">
+                    <div class="demo-grid-ruler mdl-grid">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/1255203800_6_1_1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/2878289015_6_1_1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/8279148824_6_1_1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <img src="images/5584318800_6_1_1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="mdl-layout__tab-panel" id="explore">
+            <p>This page is supposed to let you explore and like others' saved looks.</p>
+            <p>This Function is being implemented right now, plz be patient~</p>
+            <p>Your Sincerely,</p>
+            <p>TEAM DECAF</p>
+        </div>
 
     </main>
 
 </div>
 
 <div class="fixed-action-btn vertical" style="bottom: 5%; right: 5%;">
-    <div class="btn-floating btn-large orange accent-2">
+    <div class="btn-floating btn-large orange accent-3">
         <i class="large material-icons" id="filter">insert_chart</i>
     </div>
     <ul>
