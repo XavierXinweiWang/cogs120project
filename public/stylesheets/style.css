@@ -1,8 +1,97 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.card .card-image img {
+    height: 30vw;
+    width: 30vw;
 }
 
-a {
-  color: #00B7FF;
+.row {
+    border: 0 !important;
+    margin: 0.2vw !important;
+    padding: 0 !important;
+}
+
+.col {
+    border: 0 !important;
+    margin: 0.2vw !important;
+    padding: 0 !important;
+}
+
+.card {
+    border: 0 !important;
+    margin: 0.2vw !important;
+    padding: 0 !important;
+}
+
+.demo-grid-ruler.mdl-grid {
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#closet div h5 {
+    font-size: 4vw;
+}
+
+.image.more {
+    position: relative;
+    top: -30vw;
+    height: 30vw;
+    width: 30vw;
+    background-color: white;
+    opacity: 0.9;
+}
+
+.image.more p {
+    font-size: 5vw;
+    border: 0 !important;
+    margin: 0.2vw !important;
+    padding: 0 !important;
+    position: relative;
+    left: 5vw;
+    top: 10vw;
+}
+
+.image.more p i {
+    position: relative;
+    top: 1.3vw;
+}
+
+.image.less {
+    position: relative;
+    top: -30vw;
+    height: 30vw;
+    width: 30vw;
+    background-color: white;
+    opacity: 0.9;
+}
+
+.image.less p {
+    font-size: 5vw;
+    border: 0 !important;
+    margin: 0.2vw !important;
+    padding: 0 !important;
+    position: relative;
+    left: 5vw;
+    top: 10vw;
+}
+
+.image.less p i {
+    position: relative;
+    top: 1.3vw;
+}
+
+.card-image {
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 30vw;
+}
+
+button.more {
+    display: inline-block;
+    float: right;
+    top: 1vw;
+}
+
+#closet div h5 {
+    display: inline-block;
 }
