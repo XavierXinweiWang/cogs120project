@@ -1,33 +1,63 @@
 /**
- * Created by XavierXinweiWang on 16/10/1.
+ * Created by XavierXinweiWang on 16/10/26.
  */
-$('#tight').click(function()
+$('#time').click(function()
 {
-    $('#header').css("background-image", "url(images/tight.jpg)");
-    $('#header').css("background-position-y", "-12vw");
     $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark red');
-    $("#query").attr('class', 'large material-icons red');
-    $("#help").attr('class', 'mdl-cell--3-col btn-large red');
-    color_mode = 0;
+    $("#filter").attr('class', 'large material-icons red');
 });
 
-$('#slacky').click(function()
+$('#likes').click(function()
 {
-    $('#header').css("background-image", "url(images/lazycover.jpg)");
-    $('#header').css("background-position-y", "-27vw");
-    $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark lime lighten-2');
-    $("#query").attr('class', 'large material-icons green');
-    $("#help").attr('class', 'mdl-cell--3-col btn-large lime lighten-2');
-    color_mode = 2;
+    $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark lime');
+    $("#filter").attr('class', 'large material-icons green');
 });
 
-$('#mediocre').click(function()
-{
-    $('#header').css("background-image", "url(images/cover.jpg)");
-    $('#header').css("background-position-y", "-25vw");
-    $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-2');
-    $("#query").attr('class', 'large material-icons yellow darken-1');
-    $("#help").attr('class', 'mdl-cell--3-col btn-large orange accent-2');
-    color_mode = 1;
+$('#fakedata1a').click(function(){
+    $('#fake1').attr('src','images/5039325824_6_1_1.jpg');
+});
+
+$('#fakedata1b').click(function(){
+    $('#fake1').attr('src','images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg');
+});
+
+$('#fakedata2a').click(function(){
+    $('#fake2').attr('src','images/2878289015_6_1_1.jpg');
+});
+
+$('#fakedata2b').click(function(){
+    $('#fake2').attr('src','images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg');
+});
+
+$('#fakedata3a').click(function(){
+    $('#fake3').attr('src','images/4644272507_6_1_1.jpg');
+});
+
+$('#fakedata3b').click(function(){
+    $('#fake3').attr('src','images/coralfront-1000x1000.jpg');
+});
+
+$('#delete1').click(function () {
+    $('#data1').remove();
+});
+
+$('#delete2').click(function () {
+    $('#data2').remove();
+});
+
+$('#delete3').click(function () {
+    $('#data3').remove();
+});
+
+$('#wear1').click(function () {
+    $('#lastwear1').text(' Today');
+});
+
+$('#wear2').click(function () {
+    $('#lastwear2').text(' Today');
+});
+
+$('#wear3').click(function () {
+    $('#lastwear3').text(' Today');
 });
 
