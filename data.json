@@ -1,0 +1,36 @@
+{
+	"saved-looks": [
+		{
+			"title": "White Shirt, Blue Pant",
+			"date": "10/30/2016",
+      "like": "42",
+			"imageURL1": "public/images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
+      "imageURL2": "public/images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+		},
+    {
+			"title": "Grey Sweater, Cherry Chino",
+      "date": "10/29/2016",
+      "like": "42",
+      "imageURL1": "public/images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
+      "imageURL2": "public/images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+		},{
+			"title": "Colorful Dress",
+      "date": "10/28/2016",
+      "like": "42",
+      "imageURL1": "public/images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
+      "imageURL2": "public/images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+		},{
+			"title": "Blue Denim Shirt, White Pant",
+      "date": "10/27/2016",
+      "like": "42",
+      "imageURL1": "public/images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
+      "imageURL2": "public/images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+		},{
+			"title": "Yellow Shirt, Blue Pant",
+      "date": "10/26/2016",
+      "like": "42",
+      "imageURL1": "public/images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
+      "imageURL2": "public/images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+		}
+	]
+}
