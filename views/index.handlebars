@@ -75,7 +75,7 @@
                                 <form class="col s12">
                                     <div class="row">
                                         <div class="input-field col l6 m6 s6">
-                                            <img src="images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg" class="fakeitem1" id="fake1">
+                                            <img src="{{imageURL1}}" class="fakeitem1" id="fake1">
                                         </div>
 
                                         <div class="input-field col l6 m6 s6">
@@ -99,11 +99,11 @@
                                     <div class="row">
                                         <div class="input-field col l3 m3 s3"></div>
                                         <div class="input-field col l3 m3 s3" id = "fakedata1a">
-                                            <img src="images/5039325824_6_1_1.jpg" class="fakeitem2">
+                                            <img src="{{imageURL1}}" class="fakeitem2">
                                         </div>
 
                                         <div class="input-field col l3 m3 s3" id = "fakedata1b">
-                                            <img src="images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg" class="fakeitem2">
+                                            <img src="{{imageURL2}}" class="fakeitem2">
                                         </div>
 
                                         <div class="input-field col l6 m6 s6">
@@ -136,66 +136,19 @@
                 </button>
                 <ul class="top list">
                     <div class="demo-grid-ruler mdl-grid ">
+                      {{#each clothes}}
+                      {{#if top}}
                         <div class="row">
                             <div class="col">
                                 <div class="card z-depth-0">
                                     <div class="card-image">
-                                        <img src="images/tee-sun01-1000x1000.jpg">
+                                        <img src="{{imageURL}}">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/5252206400_6_1_1.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/BomberFORESTsmall-1000x1000.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/4644272507_6_1_1.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/vmo9g0yjsxsfcnlmmlxtrfcwyothw4n0.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/1255267800_6_1_1.jpg">
-                                        <!---<div class="image more">
-                                            <p>
-                                                MORE
-                                                <i class="material-icons">keyboard_arrow_right</i>
-                                            </p>
-                                        </div>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      {{/if}}
+                      {{/each}}
                     </div>
                 </ul>
             </div>
@@ -209,33 +162,19 @@
                 </button>
                 <ul class="bottom list">
                     <div class="demo-grid-ruler mdl-grid">
+                      {{#each clothes}}
+                      {{#if bottom}}
                         <div class="row">
                             <div class="col">
                                 <div class="card z-depth-0">
                                     <div class="card-image">
-                                        <img src="images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg">
+                                        <img src="{{imageURL}}">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/ORLEBAR_BROWN_BULLDOG_MOUNTAIN_FOREST_MIST_GREY_263554_FRONT_L.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/coralfront-1000x1000.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      {{/if}}
+                      {{/each}}
                     </div>
                 </ul>
             </div>
@@ -249,42 +188,19 @@
                 </button>
                 <ul class="one-piece list">
                     <div class="demo-grid-ruler mdl-grid">
+                      {{#each clothes}}
+                      {{#if one-piece}}
                         <div class="row">
                             <div class="col">
                                 <div class="card z-depth-0">
                                     <div class="card-image">
-                                        <img src="images/1255203800_6_1_1.jpg">
+                                        <img src="{{imageURL}}">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/2878289015_6_1_1.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/8279148824_6_1_1.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card z-depth-0">
-                                    <div class="card-image">
-                                        <img src="images/5584318800_6_1_1.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      {{/if}}
+                      {{/each}}
                     </div>
                 </ul>
             </div>
