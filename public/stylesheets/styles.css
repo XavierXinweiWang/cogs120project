@@ -397,6 +397,22 @@ div.collapsible-header {
   float: left;
 }
 
+.before-like, .after-like {
+  float: right;
+}
+
+.after-like {
+  right: -24px;
+}
+
 #explore div {
-  height: 50vw;
+  height: 100vh;
+}
+
+#explore div div div {
+  height: 100vw;
+}
+
+#explore div div div .card-action {
+  height: 15vw;
 }
