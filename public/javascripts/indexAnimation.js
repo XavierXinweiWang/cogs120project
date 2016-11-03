@@ -1,6 +1,10 @@
 /**
  * Created by XavierXinweiWang on 16/10/26.
  */
+
+var selected = 0;
+
+
 $('#time').click(function()
 {
     $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark red');
@@ -13,51 +17,46 @@ $('#likes').click(function()
     $("#filter").attr('class', 'large material-icons green');
 });
 
-$('#fakedata1a').click(function(){
-    $('#fake1').attr('src','images/5039325824_6_1_1.jpg');
+$('.fakeitem2').click(function(){
+    $(this).parentsUntil("#data1").parent().find("#fake1").attr('src', $(this).attr("src"));
 });
 
-$('#fakedata1b').click(function(){
-    $('#fake1').attr('src','images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg');
+$('.delete').click(function () {
+    $(this).parentsUntil("#data1").parent().parent().remove();
 });
 
-$('#fakedata2a').click(function(){
-    $('#fake2').attr('src','images/2878289015_6_1_1.jpg');
+$('.wear').click(function () {
+    $(this).parentsUntil("#data1").parent().find('#lastwear1').text(' Today');
 });
 
-$('#fakedata2b').click(function(){
-    $('#fake2').attr('src','images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg');
+$('#to-saved-looks').click(function() {
+  $('#filter').parent().parent().show();
+  $('#filter').text("sort");
+  $('#filter').parent().parent().find("ul").show();
 });
 
-$('#fakedata3a').click(function(){
-    $('#fake3').attr('src','images/4644272507_6_1_1.jpg');
+$('#to-all-clothes').click(function() {
+  $('#filter').parent().parent().show();
+  $('#filter').text("filter_list");
+  $('#filter').parent().parent().find("ul").hide();
 });
 
-$('#fakedata3b').click(function(){
-    $('#fake3').attr('src','images/coralfront-1000x1000.jpg');
+$('#to-explore').click(function() {
+  $('#filter').parent().parent().hide();
 });
 
-$('#delete1').click(function () {
-    $('#data1').remove();
-});
+$('.card-image').click(function() {
+    $(this).find('i').toggle();
 
-$('#delete2').click(function () {
-    $('#data2').remove();
-});
+    if($(this).find('i').attr("style") == "display: none;") {
+      selected--;
+    } else {
+      selected++;
+    }
 
-$('#delete3').click(function () {
-    $('#data3').remove();
+    if (selected == 0) {
+      $('#filter').text("filter_list");
+    } else {
+      $('#filter').text("done");
+    }
 });
-
-$('#wear1').click(function () {
-    $('#lastwear1').text(' Today');
-});
-
-$('#wear2').click(function () {
-    $('#lastwear2').text(' Today');
-});
-
-$('#wear3').click(function () {
-    $('#lastwear3').text(' Today');
-});
-

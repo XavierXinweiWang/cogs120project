@@ -366,7 +366,7 @@ button.more {
 0 {left:0px;}
 25% {left:20px;}
 50% {left:0px;}
-75% {left:20px;}  
+75% {left:20px;}
 100% {left: 0%;}
 }
 
@@ -374,9 +374,58 @@ button.more {
 0 {left:0px;}
 25% {left:20px;}
 50% {left:0px;}
-75% {left:20px;}  
+75% {left:20px;}
 100% {left: 0%;}
 }
 
+#lastwear1 i.material-icons {
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 15px !important;
+  height: 15px !important;
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
 
+#like1 i.material-icons {
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 15px !important;
+  height: 15px !important;
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
 
+#form form .row div.input-field {
+  margin: 0 !important;
+}
+
+div.row {
+  margin: 0 !important;
+}
+
+div.collapsible-header {
+  height: 160px !important;
+}
+
+.collapsible-header .section--center.mdl-grid.mdl-grid--no-spacing .mdl-card.mdl-cell--12-col {
+  height: 150px !important;
+  min-height: 150px !important;
+}
+
+#form {
+  height: 150px !important;
+  min-height: 150px !important;
+}
+
+.check-icon {
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: -30vw;
+  height: 0;
+}
