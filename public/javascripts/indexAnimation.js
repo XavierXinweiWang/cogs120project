@@ -80,8 +80,6 @@ $('#closet').find('.card-image').click(function() {
     }
 });
 
-/* Start to Copy */
-
 $('#filter').click(function() {
   if($('#filter').text() == "done") {
     $('#to-saved-looks').addClass("is-active");
@@ -121,6 +119,9 @@ $('#filter').click(function() {
 
    selected_clothes = [];
    selected = 0;
+
+   $('#filter').text("sort");
+   $('#filter').parent().parent().find("ul").show();
   }
 });
 
@@ -128,8 +129,9 @@ $('#collection').on('click', '.delete', function() {
     $(this).parentsUntil("#collection").remove();
 });
 
-/* End of Copy */
-
+$('#collection').on('click', '.fakeitem2', function() {
+    $(this).parentsUntil("#data1").parent().find("#fake1").attr('src', $(this).attr("src"));
+});
 
 $(".before-like").click(function() {
   $(".after-like").show();
