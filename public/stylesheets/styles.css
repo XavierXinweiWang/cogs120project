@@ -421,3 +421,11 @@ div.collapsible-header {
   height: 150px !important;
   min-height: 150px !important;
 }
+
+.check-icon {
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: -30vw;
+  height: 0;
+}
