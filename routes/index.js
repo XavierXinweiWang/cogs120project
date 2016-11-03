@@ -2,8 +2,18 @@ var express = require('express');
 var router = express.Router();
 var data = require('../data.json');
 
-/* GET home page. */
+/* GET Signin page. */
 router.get('/', function(req, res, next) {
+  res.render('main', {title: 'Express'});
+});
+
+/* GET Signin page. */
+router.get('/register', function(req, res, next) {
+  res.render('register', {title: 'Express'});
+});
+
+/* GET home page. */
+router.get('/home', function(req, res, next) {
   res.render('index', data);
 });
 

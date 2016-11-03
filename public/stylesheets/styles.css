@@ -378,7 +378,7 @@ div.collapsible-header {
   min-height: 150px !important;
 }
 
-section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
+section div #form {
   height: 150px !important;
   min-height: 150px !important;
 }

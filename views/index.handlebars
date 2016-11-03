@@ -56,17 +56,17 @@
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-3" id="toolbar">
-            <a href="#history" class="mdl-layout__tab is-active" id="to-saved-looks">Saved Looks</a>
-            <a href="#closet" class="mdl-layout__tab" id="to-all-clothes">All Clothes</a>
+            <a href="#history" class="mdl-layout__tab" id="to-saved-looks">Saved Looks</a>
+            <a href="#closet" class="mdl-layout__tab is-active" id="to-all-clothes">All Clothes</a>
             <a href="#explore" class="mdl-layout__tab" id="to-explore">Explore</a>
             <a href="/compare" class=" mdl-layout__tab"><i class="material-icons" style="padding-top: 5vw">camera_alt</i></a>
         </div>
 
     </header>
     <main class="mdl-layout__content">
-        <div class="mdl-layout__tab-panel is-active" id="history">
-        {{#each saved-looks}}
-        <ul class="collapsible" data-collapsible="accordion">
+        <div class="mdl-layout__tab-panel" id="history">
+        <ul class="collapsible" data-collapsible="accordion" id="collection">
+            {{#each saved-looks}}
             <li id="data1">
                 <div class="collapsible-header">
                     <section class="section--center mdl-grid mdl-grid--no-spacing">
@@ -119,13 +119,14 @@
                     </section>
                 </div>
             </li>
+            {{/each}}
         </ul>
-        {{/each}}
+
 
         </div>
 
 
-        <div class="mdl-layout__tab-panel" id="closet">
+        <div class="mdl-layout__tab-panel is-active" id="closet">
             <div id="top">
                 <h5>Top</h5>
                 <!-- Flat button with ripple -->
@@ -214,10 +215,10 @@
             <div class="col s12 m7">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg">
+                  <img src="../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg" id="exploreImg">
                 </div>
                 <div class="card-action">
-                  <i class="material-icons">arrow_forward</i>
+                  <i class="material-icons skip">arrow_forward</i>
                   <i class="material-icons before-like">favorite_border</i>
                   <i class="material-icons after-like" style="display: none">favorite</i>
                 </div>
@@ -232,10 +233,10 @@
 
 <div class="fixed-action-btn vertical" style="bottom: 5%; right: 5%;">
     <div class="btn-floating btn-large orange accent-3">
-        <i class="large material-icons" id="filter">sort</i>
+        <i class="large material-icons" id="filter" >sort</i>
     </div>
-    <ul>
-        <li id="tight_btn"><a class="btn-floating red"><i class="material-icons" id="time">query_builder</i></a></li>
+    <ul style="display: none">
+        <li id="tight_btn"><a class="btn-floating red" ><i class="material-icons" id="time">query_builder</i></a></li>
         <li id="slacky_btn"><a class="btn-floating green"><i class="material-icons" id="likes">thumb_up</i></a></li>
     </ul>
 </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Compare</title>
+    <title>Login</title>
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <!--<link rel="icon" sizes="192x192" href="images/android-desktop.png">-->
@@ -47,36 +47,44 @@
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary" id="header">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        <div class="mdl-layout__header-row">
+            <h1 style="font-family: lazyyyfont; font-size: 13vw">Vestiarium</h1>
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-            <h1 style="font-family: lazyyyfont">Vestiarium</h1>
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-3" id="toolbar">
-            <a href="/home" class=" mdl-layout__tab"><i class="material-icons" style="padding-top: 5vw">arrow_back</i></a>
-            <a href="#compare" class="mdl-layout__tab is-active">Compare Similarity</a>
-
-        </div>
-
     </header>
     <main class="mdl-layout__content">
 
-        <div class="mdl-layout__tab-panel is-active" id="compare">
-            <div class="row">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg">
-                        </div>
-                        <div class="card-action">
-                            <i class="material-icons skip">arrow_forward</i>
-                            <i class="material-icons before-like">favorite_border</i>
-                            <i class="material-icons after-like" style="display: none">favorite</i>
+        <div class="mdl-card mdl-cell--12-col">
+            <div class="mdl-card mdl-cell mdl-cell--12-col" id="form">
+                <form class="col s12" action="/login" method="POST">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" class="validate">
+                            <label for="username">Username</label>
                         </div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Passward</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="comfirmpassword" type="password" class="validate">
+                            <label for="comfirmpassword">Confirm Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="/home" class="waves-effect waves-light btn col s6" type="submit">Sign Up</a>
+                    </div>
+
+                </form>
             </div>
         </div>
 
