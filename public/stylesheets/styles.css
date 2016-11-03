@@ -287,7 +287,7 @@ html, body {
   padding: 0 !important;
 }
 
-.demo-grid-ruler.mdl-grid {
+ul.list .demo-grid-ruler.mdl-grid {
   border: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -306,46 +306,7 @@ html, body {
   opacity: 0.9;
 }
 
-.image.more p {
-  font-size: 5vw;
-  border: 0 !important;
-  margin: 0.2vw !important;
-  padding: 0 !important;
-  position: relative;
-  left: 5vw;
-  top: 10vw;
-}
-
-.image.more p i {
-  position: relative;
-  top: 1.3vw;
-}
-
-.image.less {
-  position: relative;
-  top: -30vw;
-  height: 30vw;
-  width: 30vw;
-  background-color: white;
-  opacity: 0.9;
-}
-
-.image.less p {
-  font-size: 5vw;
-  border: 0 !important;
-  margin: 0.2vw !important;
-  padding: 0 !important;
-  position: relative;
-  left: 5vw;
-  top: 10vw;
-}
-
-.image.less p i {
-  position: relative;
-  top: 1.3vw;
-}
-
-.card-image {
+.card.z-depth-0 .card-image {
   border: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -428,4 +389,14 @@ div.collapsible-header {
   float: right;
   top: -30vw;
   height: 0;
+}
+
+.delete-this, .before-like, .after-like {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+#explore div {
+  height: 50vw;
 }
