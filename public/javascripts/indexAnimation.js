@@ -54,6 +54,8 @@ $('#to-explore').click(function() {
   $('#filter').parent().parent().hide();
 });
 
+
+
 $('#closet').find('.card-image').click(function() {
     $(this).find('i').toggle();
 
@@ -78,6 +80,19 @@ $('#closet').find('.card-image').click(function() {
     }
 });
 
+/* Start to Copy */
+
+$('#filter').click(function() {
+  if($('#filter').text() == "done") {
+    $('#to-saved-looks').addClass("is-active");
+    $('#history').addClass("is-active");
+    $('#to-all-clothes').removeClass("is-active");
+    $('#closet').removeClass("is-active");
+
+    $(".check-icon").hide();
+  }
+});
+
 $('#filter').click(function() {
   if($(this).text() == "done") {
     var title = "";
@@ -95,8 +110,22 @@ $('#filter').click(function() {
     $("#history").prepend(
       "<ul class='collapsible' data-collapsible='accordion'><li id='data1'><div class='collapsible-header'><section class='section--center mdl-grid mdl-grid--no-spacing'><div class='mdl-card mdl-cell--12-col'><div class='mdl-card mdl-cell mdl-cell--12-col' id='form'><form class='col s12'><div class='row'><div class='input-field col l6 m6 s6'><img src='" + new_look.imageURL1 + "' class='fakeitem1' id='fake1'></div><div class='input-field col l6 m6 s6'><p>" + new_look.title + "</p><p id='lastwear1'><i class='material-icons'>access_time</i>" + new_look.date + "</p><p id='like1'><i class='material-icons'>favorite</i>" + new_look.like + "likes</p></div></div></form></div></div></section></div><div class='collapsible-body'><section class='section--center mdl-grid mdl-grid--no-spacing'><div class='mdl-card mdl-cell--12-col'><div class='mdl-card mdl-cell mdl-cell--12-col'><form class='col s12'><div class='row'><div class='input-field col l3 m3 s3'></div><div class='input-field col l3 m3 s3' id = 'fakedata1a'><img src='" + new_look.imageURL1 + "' class='fakeitem2'></div><div class='input-field col l3 m3 s3' id = 'fakedata1b'><img src='" + new_look.imageURL2 + "' class='fakeitem2'></div><div class='input-field col l6 m6 s6'><a class='mdl-button mdl-js-button mdl-button--accent delete' style='width: 100%' id='delete1'>DELETE</a></div><div class='input-field col l6 m6 s6'><a class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent wear' style='width: 100%' id='wear1'>WEAR</a></div></div></form></div></div></section></div></li></ul>"
     );
+
+    new_look = {
+     "title": "",
+     "date": "Today",
+     "like": "0",
+     "imageURL1": "",
+     "imageURL2": ""
+   };
+
+   selected_clothes = [];
+   selected = 0;
   }
 });
+
+/* End of Copy */
+
 
 $(".before-like").click(function() {
   $(".after-like").show();
