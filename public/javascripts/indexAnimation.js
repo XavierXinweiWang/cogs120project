@@ -14,11 +14,11 @@ $('#likes').click(function()
 });
 
 $('#fakedata1a').click(function(){
-    $('#fake1').attr('src','images/5039325824_6_1_1.jpg');
+    $(this).parentsUntil("#data1").parent().find("#fake1").attr('src', $("img", this).attr("src"));
 });
 
 $('#fakedata1b').click(function(){
-    $('#fake1').attr('src','images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg');
+    $('#fake1').attr('src', $("img", this).attr("src"));
 });
 
 $('#fakedata2a').click(function(){
@@ -60,4 +60,3 @@ $('#wear2').click(function () {
 $('#wear3').click(function () {
     $('#lastwear3').text(' Today');
 });
-
