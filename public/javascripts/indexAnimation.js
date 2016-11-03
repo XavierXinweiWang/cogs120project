@@ -4,6 +4,16 @@
 
 var selected = 0;
 
+var new_look = {
+  "title": "",
+  "date": "Today",
+  "like": "0",
+  "imageURL1": "",
+  "imageURL2": ""
+};
+
+var selected_clothes = [];
+
 
 $('#time').click(function()
 {
