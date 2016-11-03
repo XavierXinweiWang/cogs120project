@@ -24,3 +24,7 @@ $('.delete').click(function () {
 $('.wear').click(function () {
     $(this).parentsUntil("#data1").parent().find('#lastwear1').text(' Today');
 });
+
+$('.card-image').click(function() {
+    $(this).find('i').toggle();
+});
