@@ -64,16 +64,35 @@
     <main class="mdl-layout__content">
 
         <div class="mdl-layout__tab-panel is-active" id="compare">
+            <div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="col s8">
+                            <h7>Be a wise buyer!</h7>
+                        </div>
+                        <div class="col s1"></div>
+                        <div class="col s3">
+                            <a href="/"><h7>Logout</h7></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <div class="row">
                 <div class="col s12 m7">
                     <div class="card">
-                        <div class="card-image">
-                            <img src="../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg">
+                        <div class="card-image" id="upload">
+                            <img class="icon icons8-Upload-to-Cloud" src="data:image/png;base64,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" id="uploadIcon">
+                            <img src="/images/rockmui_aloneteewhite-1000x1000.jpg" id="fakeUpload">
                         </div>
                         <div class="card-action">
-                            <i class="material-icons skip">arrow_forward</i>
-                            <i class="material-icons before-like">favorite_border</i>
-                            <i class="material-icons after-like" style="display: none">favorite</i>
+                            <h7 id="uploadInstruction">Upload the cloth you want to buy</h7>
+                            <div id="resultPercentage">
+                                <h7>The similarity of this cloth to what you have is 50%</h7>
+                                <div class="row" id="resultButtons">
+                                    <a href="/home" class="waves-effect waves-light btn col s6" type="submit" id="addCloth">Buy It!</a>
+                                    <a class="waves-effect waves-light btn col s6 red" type="submit" id="cancel">Cancel</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
