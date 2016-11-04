@@ -81,7 +81,7 @@
                                         <div class="input-field col l6 m6 s6">
                                             <p>{{title}}</p>
                                             <p id="lastwear1"><i class="material-icons">access_time</i>{{date}}</p>
-                                            <p id="like1"><i class="material-icons">favorite</i>{{like}}likes</p>
+                                            <p id="like1"><i class="material-icons">favorite</i>{{like}} likes</p>
                                         </div>
 
                                     </div>
@@ -210,12 +210,40 @@
                 </ul>
             </div>
         </div>
+
+
+
+
+
         <div class="mdl-layout__tab-panel" id="explore">
+          {{#each saved-looks}}
+
+          <li id="data1">
           <div class="row">
             <div class="col s12 m7">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg" id="exploreImg">
+                </div>
+                <div>
+                    <section class="section--center mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-card mdl-cell--12-col">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col l3 m3 s3"></div>
+                                        <div class="input-field col l3 m3 s3" id = "fakedata1a">
+                                            <img src="{{imageURL1}}" class="fakeitem2">
+                                        </div>
+
+                                        <div class="input-field col l3 m3 s3" id = "fakedata1b">
+                                            <img src="{{imageURL2}}" class="fakeitem2">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
                 </div>
                 <div class="card-action">
                   <i class="material-icons skip">arrow_forward</i>
@@ -225,6 +253,7 @@
               </div>
             </div>
           </div>
+          {{/each}}
         </div>
 
     </main>

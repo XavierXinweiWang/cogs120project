@@ -378,7 +378,7 @@ div.collapsible-header {
   min-height: 150px !important;
 }
 
-section div #form {
+section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
   height: 150px !important;
   min-height: 150px !important;
 }
@@ -404,7 +404,7 @@ section div #form {
 .after-like {
   right: -24px;
 }
-
+/*
 #explore div {
   height: 100vh;
 }
@@ -415,4 +415,4 @@ section div #form {
 
 #explore div div div .card-action {
   height: 15vw;
-}
+}*/
