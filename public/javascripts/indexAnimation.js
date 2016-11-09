@@ -136,11 +136,11 @@ $('#collection').on('click', '.fakeitem2', function() {
 });
 
 $('.card-action').on('click', '.before-like', function(){
-    if ($(this).html()=='favorite_border'){
-        $(this).html('favorite');
+    if ($(this).find("i").html()=='favorite_border'){
+        $(this).find("i").html('favorite');
     }
     else{
-        $(this).html('favorite_border');
+        $(this).find("i").html('favorite_border');
     }
 });
 
