@@ -99,6 +99,33 @@
       "one-piece": "one-piece",
 			"imageURL": "../images/1255203800_6_1_1.jpg"
 		}
+	],
+	"exploration": [
+		{
+			"title": "Grey Sweater, Cherry Chino",
+			"date": "10/29/2016",
+			"like": "42",
+			"imageURL1": "../images/0085305800_6_1_1.jpg",
+			"imageURL2": "../images/1255203800_6_1_1.jpg"
+		},{
+			"title": "Colorful Dress",
+			"date": "10/28/2016",
+			"like": "42",
+			"imageURL1": "../images/1255267800_6_1_1.jpg",
+			"imageURL2": "../images/2878289015_6_1_1.jpg"
+		},{
+			"title": "Blue Denim Shirt, White Pant",
+			"date": "10/27/2016",
+			"like": "42",
+			"imageURL1": "../images/coalssweater-1000x1000.jpg",
+			"imageURL2": "../images/2878289015_6_1_1.jpg"
+		},{
+			"title": "Yellow Shirt, Blue Pant",
+			"date": "10/26/2016",
+			"like": "42",
+			"imageURL1": "../images/Baby-Clothes-Sales-1bojpfk0oyc.jpg",
+			"imageURL2": "../images/2878289015_6_1_1.jpg"
+		}
 	]
 
 

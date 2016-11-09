@@ -31,7 +31,7 @@ $('.fakeitem2').click(function(){
 });
 
 $('.delete').click(function () {
-    $(this).parentsUntil("#collection").remove();
+    $(this).parentsUntil("#collection").fadeOut(500);
 });
 
 $('.wear').click(function () {
@@ -128,17 +128,47 @@ $('#filter').click(function() {
 });
 
 $('#collection').on('click', '.delete', function() {
-    $(this).parentsUntil("#collection").remove();
+    $(this).parentsUntil("#collection").fadeOut(500);
 });
 
 $('#collection').on('click', '.fakeitem2', function() {
     $(this).parentsUntil("#data1").parent().find("#fake1").attr('src', $(this).attr("src"));
 });
 
-$(".before-like").click(function() {
-  $(".after-like").show();
+$('.card-action').on('click', '.before-like', function(){
+    if ($(this).html()=='favorite_border'){
+        $(this).html('favorite');
+    }
+    else{
+        $(this).html('favorite_border');
+    }
 });
 
-$(".after-like").click(function() {
-  $(".after-like").hide();
+$('.card-action').on('click', '.skip', function(){
+    $(this).parentsUntil("#explore").fadeOut(500);
+});
+
+
+$('#fakeUpload').hide();
+$('#resultPercentage').hide();
+$('#upload').click(function(){
+    $('#uploadIcon').hide();
+    $('#fakeUpload').show();
+    $('#uploadInstruction').hide();
+    $('#resultPercentage').show();
+
+});
+
+$('#cancel').click(function(){
+    $('#uploadIcon').show();
+    $('#fakeUpload').hide();
+    $('#uploadInstruction').show();
+    $('#resultPercentage').hide();
+
+});
+
+$('#addCloth').click(function(){
+    $("#topGrid").append(
+        "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image'> <img src='/images/rockmui_aloneteewhite-1000x1000.jpg'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
+    );
 });

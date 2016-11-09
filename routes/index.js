@@ -19,7 +19,7 @@ router.get('/home', function(req, res, next) {
 
 /* GET storage page. */
 router.get('/compare', function(req, res, next) {
-  res.render('storage', { title: 'Express' });
+  res.render('storage', data);
 });
 
 module.exports = router;

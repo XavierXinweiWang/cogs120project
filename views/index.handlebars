@@ -65,6 +65,22 @@
     </header>
     <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel" id="history">
+            <div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="col s8">
+                            <h7>Here are Your Saved Looks</h7>
+                        </div>
+                        <div class="col s1"></div>
+                        <div class="col s3">
+                            <a href="/"><h7>Logout</h7></a>
+                        </div>
+                        <div class="col s12">
+                            <h7>Click each entry for more info!</h7>
+                        </div>
+                    </div>
+                </form>
+            </div>
         <ul class="collapsible" data-collapsible="accordion" id="collection">
             {{#each saved-looks}}
             <li id="data1">
@@ -127,14 +143,26 @@
 
 
         <div class="mdl-layout__tab-panel is-active" id="closet">
-            <div id="top">
-                <h5>Top</h5>
-                <!-- Flat button with ripple -->
-                <button class="mdl-button mdl-js-button mdl-js-ripple-effect more">
-                    MORE
-                </button>
+            <div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="col s8">
+                            <h7>View all your clothes here</h7>
+                        </div>
+                        <div class="col s1"></div>
+                        <div class="col s3">
+                            <a href="/"><h7>Logout</h7></a>
+                        </div>
+                        <div class="col s12">
+                            <h7>Select to make your new looks!</h7>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="top" class="card">
+                <h5>&nbsp;&nbsp;Top</h5>
                 <ul class="top list">
-                    <div class="demo-grid-ruler mdl-grid ">
+                    <div class="demo-grid-ruler mdl-grid" id="topGrid">
                       {{#each clothes}}
                       {{#if top}}
                         <div class="row">
@@ -155,12 +183,8 @@
             </div>
 
 
-            <div id="bottom">
-                <h5>Bottom</h5>
-                <!-- Flat button with ripple -->
-                <button class="mdl-button mdl-js-button mdl-js-ripple-effect more">
-                    MORE
-                </button>
+            <div id="bottom" class="card">
+                <h5>&nbsp;&nbsp;Bottom</h5>
                 <ul class="bottom list">
                     <div class="demo-grid-ruler mdl-grid">
                       {{#each clothes}}
@@ -183,12 +207,8 @@
             </div>
 
 
-            <div id="one-piece">
-                <h5>One Piece</h5>
-                <!-- Flat button with ripple -->
-                <button class="mdl-button mdl-js-button mdl-js-ripple-effect more">
-                    MORE
-                </button>
+            <div id="one-piece" class="card">
+                <h5>&nbsp;&nbsp;One Piece</h5>
                 <ul class="one-piece list">
                     <div class="demo-grid-ruler mdl-grid">
                       {{#each clothes}}
@@ -212,35 +232,46 @@
         </div>
 
 
-
-
-
         <div class="mdl-layout__tab-panel" id="explore">
-          {{#each saved-looks}}
-
-          <li id="data1">
+            <div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="col s8">
+                            <h7>View other users' looks</h7>
+                        </div>
+                        <div class="col s1"></div>
+                        <div class="col s3">
+                            <a href="/"><h7>Logout</h7></a>
+                        </div>
+                        <div class="col s12">
+                            <h7>Give it a like if you think the look is nice!</h7>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {{#each exploration}}
           <div class="row">
             <div class="col s12 m7">
               <div class="card">
-                <div class="card-image">
-                  <img src="../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg" id="exploreImg">
-                </div>
                 <div>
                     <section class="section--center mdl-grid mdl-grid--no-spacing">
                         <div class="mdl-card mdl-cell--12-col">
                             <div class="mdl-card mdl-cell mdl-cell--12-col">
-                                <form class="col s12">
                                     <div class="row">
-                                        <div class="input-field col l3 m3 s3"></div>
+                                        <div class="input-field col l2 m2 s2"></div>
                                         <div class="input-field col l3 m3 s3" id = "fakedata1a">
                                             <img src="{{imageURL1}}" class="fakeitem2">
                                         </div>
-
+                                        <div class="input-field col l2 m2 s2"></div>
                                         <div class="input-field col l3 m3 s3" id = "fakedata1b">
                                             <img src="{{imageURL2}}" class="fakeitem2">
                                         </div>
+                                        <div class="input-field col l2 m2 s2"></div>
+                                        <div class="input-field col l12 m12 s12" id = "fakedataDescription">
+                                            <h5>{{ title }}</h5>
+                                            <h7>Liked by {{like}} People!</h7>
+                                        </div>
                                     </div>
-                                </form>
                             </div>
                         </div>
                     </section>
@@ -248,7 +279,6 @@
                 <div class="card-action">
                   <i class="material-icons skip">arrow_forward</i>
                   <i class="material-icons before-like">favorite_border</i>
-                  <i class="material-icons after-like" style="display: none">favorite</i>
                 </div>
               </div>
             </div>
