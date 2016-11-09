@@ -423,3 +423,14 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
   display: inline-block;
   left: 30%;
 }
+
+#explore #data1 {
+  position: fixed;
+  top: 20vh;
+}
+
+#explore {
+  padding-top: 16px;
+  padding-bottom: 0px;
+  background: none;
+}
