@@ -434,3 +434,11 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
   padding-bottom: 0px;
   background: none;
 }
+
+#fakedataDescription h5 {
+  height: 25px;
+  width: 75vw !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
