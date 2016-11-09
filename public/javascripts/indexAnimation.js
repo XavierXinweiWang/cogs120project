@@ -45,6 +45,9 @@ $('#to-saved-looks').click(function() {
 });
 
 $('#to-all-clothes').click(function() {
+  selected_clothes = [];
+  selected = 0;
+  $(".check-icon").hide();
   $('#filter').parent().parent().show();
   $('#filter').text("filter_list");
   $('#filter').parent().parent().find("ul").hide();
@@ -173,12 +176,12 @@ $('#addCloth').click(function(){
     );
 });
 
-$(".fakeitem2").click(function() {
+$("#history").find(".fakeitem2").click(function() {
   $(".onview").removeClass("onview");
   $(this).addClass("onview");
 });
 
-$('#collection').on('click', '.fakeitem2', function() {
+$("#history").find('#collection').on('click', '.fakeitem2', function() {
   $(".onview").removeClass("onview");
   $(this).addClass("onview");
 });
