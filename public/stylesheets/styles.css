@@ -404,15 +404,9 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
 .after-like {
   right: -24px;
 }
-/*
-#explore div {
-  height: 100vh;
-}
 
-#explore div div div {
-  height: 100vw;
+.onview {
+  padding: 3px !important;
+  background-color: rgb(255,64,129) !important;
+  border-color: black !important;
 }
-
-#explore div div div .card-action {
-  height: 15vw;
-}*/

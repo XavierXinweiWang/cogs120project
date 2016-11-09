@@ -172,3 +172,8 @@ $('#addCloth').click(function(){
         "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image'> <img src='/images/rockmui_aloneteewhite-1000x1000.jpg'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
     );
 });
+
+$(".fakeitem2").click(function() {
+  $(".onview").removeClass("onview");
+  $(this).addClass("onview");
+});
