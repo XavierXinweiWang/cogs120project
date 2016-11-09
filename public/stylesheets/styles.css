@@ -410,3 +410,16 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
   background-color: rgb(255,64,129) !important;
   border-color: black !important;
 }
+
+.card-action a.waves-effect.waves-light.btn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.explore.fakeitem1 {
+  width: 50vw;
+  height: 50vw;
+  position: relative;
+  display: inline-block;
+  left: 30%;
+}
