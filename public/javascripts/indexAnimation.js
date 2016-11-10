@@ -175,12 +175,6 @@ $('#cancel').click(function(){
     $('#itemsToCompare').hide();
 });
 
-$('#addCloth').click(function(){
-    $("#topGrid").append(
-        "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image'> <img src='/images/rockmui_aloneteewhite-1000x1000.jpg'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
-    );
-});
-
 $(".fakeitem2").click(function() {
   $(this).parentsUntil(".row").parent().find(".onview").removeClass("onview");
   $(this).addClass("onview");
@@ -205,13 +199,35 @@ $("#addCloth").click(function() {
 });
 
 $("index").ready(function(){
-  //var toUploadHere = sessionStorage.getItem("toUpload");
-  //console.log(toUploadHere);
   var numUploadedX = sessionStorage.getItem("numUploaded");
 
   for (var i = 0; i < numUploadedX; i++) {
     $("#topGrid").prepend(
-      "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image'> <img src='../images/rockmui_aloneteewhite-1000x1000.jpg'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
+      "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image new'> <img src='../images/rockmui_aloneteewhite-1000x1000.jpg'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
     );
+  }
+});
+
+$('#topGrid').on('click', '.card-image.new', function() {
+  $(this).find('i').toggle();
+
+  if($(this).find('i').attr("style") == "display: none;") {
+    for (var i = 0; i < selected_clothes.length; i++) {
+      if (selected_clothes[i].title == $(this).find('p').text()) {
+        selected_clothes.splice(i, 1);
+      }
+    }
+    selected--;
+  } else {
+    selected_clothes.push(
+      {"title" : $(this).find('p').text(), "imageURL" : $(this).find('img').attr("src")}
+    );
+    selected++;
+  }
+
+  if (selected == 0) {
+    $('#filter').text("filter_list");
+  } else {
+    $('#filter').text("done");
   }
 });
