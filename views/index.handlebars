@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Index</title>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--<link rel="icon" sizes="192x192" href="images/android-desktop.png">-->
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <!--<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">-->
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!--<link rel="shortcut icon" href="images/favicon.png">-->
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+  -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-pink.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection"/>
+    <!--Import select2.css-->
+    <link type="text/css" rel="stylesheet" href="stylesheets/select2.min.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/materialize.min.js"></script>
+    <script type="text/javascript" src="javascripts/select2.min.js"></script>
+
+</head>
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary" id="header">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            <h1 style="font-family: lazyyyfont">Vestiarium</h1>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-3" id="toolbar">
+            <a href="#history" class="mdl-layout__tab" id="to-saved-looks">Saved Looks</a>
+            <a href="#closet" class="mdl-layout__tab is-active" id="to-all-clothes">All Clothes</a>
+            <a href="#explore" class="mdl-layout__tab" id="to-explore">Explore</a>
+            <a href="/compare" class=" mdl-layout__tab"><i class="material-icons" style="padding-top: 5vw">camera_alt</i></a>
+        </div>
+
+    </header>
+    <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel" id="history">
+            <div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="col s8">
+                            <h7>Here are Your Saved Looks</h7>
+                        </div>
+                        <div class="col s1"></div>
+                        <div class="col s3">
+                            <a href="/signout" id="logout"><h7>Logout</h7></a>
+                        </div>
+                        <div class="col s12">
+                            <h7>Click each entry for more info!</h7>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        <ul class="collapsible" data-collapsible="accordion" id="collection">
+            {{#each saved-looks}}
+            <li id="data1">
+                <div class="collapsible-header">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-card mdl-cell--12-col">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col" id="form">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col l6 m6 s6">
+                                            <img src="{{imageURL1}}" class="fakeitem1" id="fake1">
+                                        </div>
+
+                                        <div class="input-field col l6 m6 s6">
+                                            <p>{{title}}</p>
+                                            <p id="lastwear1"><i class="material-icons">access_time</i>{{date}}</p>
+                                            <p id="like1"><i class="material-icons">favorite</i>{{like}} likes</p>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="collapsible-body">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-card mdl-cell--12-col">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col l3 m3 s3"></div>
+                                        <div class="input-field col l3 m3 s3" id = "fakedata1a">
+                                            <img src="{{imageURL1}}" class="fakeitem2 onview">
+                                        </div>
+
+                                        <div class="input-field col l3 m3 s3" id = "fakedata1b">
+                                            <img src="{{imageURL2}}" class="fakeitem2">
+                                        </div>
+
+                                        <div class="input-field col l6 m6 s6">
+                                          <a class="mdl-button mdl-js-button mdl-button--accent delete" style="width: 100%" id="delete1">DELETE</a>
+                                        </div>
+                                        <div class="input-field col l6 m6 s6">
+                                          <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent wear" style="width: 100%" id="wear1">WEAR</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+
+
+        </div>
+
+
+        <div class="mdl-layout__tab-panel is-active" id="closet">
+            <div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="col s8">
+                            <h7>View all your clothes here</h7>
+                        </div>
+                        <div class="col s1"></div>
+                        <div class="col s3">
+                            <a href="/signout" id="logout"><h7>Logout</h7></a>
+                        </div>
+                        <div class="col s12">
+                            <h7>Select to make your new looks!</h7>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="top" class="card">
+                <h5>&nbsp;&nbsp;Top</h5>
+                <ul class="top list">
+                    <div class="demo-grid-ruler mdl-grid" id="topGrid">
+                      {{#each clothes}}
+                      {{#if top}}
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <p style="display: none">{{title}}</p>
+                                        <img src="{{imageURL}}">
+                                        <i class="material-icons check-icon" style="display: none">check_circle</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      {{/if}}
+                      {{/each}}
+                    </div>
+                </ul>
+            </div>
+
+
+            <div id="bottom" class="card">
+                <h5>&nbsp;&nbsp;Bottom</h5>
+                <ul class="bottom list">
+                    <div class="demo-grid-ruler mdl-grid">
+                      {{#each clothes}}
+                      {{#if bottom}}
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <p style="display: none">{{title}}</p>
+                                        <img src="{{imageURL}}">
+                                        <i class="material-icons check-icon" style="display: none">check_circle</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      {{/if}}
+                      {{/each}}
+                    </div>
+                </ul>
+            </div>
+
+
+            <div id="one-piece" class="card">
+                <h5>&nbsp;&nbsp;One Piece</h5>
+                <ul class="one-piece list">
+                    <div class="demo-grid-ruler mdl-grid">
+                      {{#each clothes}}
+                      {{#if one-piece}}
+                        <div class="row">
+                            <div class="col">
+                                <div class="card z-depth-0">
+                                    <div class="card-image">
+                                        <p style="display: none">{{title}}</p>
+                                        <img src="{{imageURL}}">
+                                        <i class="material-icons check-icon" style="display: none">check_circle</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      {{/if}}
+                      {{/each}}
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="mdl-layout__tab-panel" id="explore">
+            <div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="col s8">
+                            <h7>View other users' looks</h7>
+                        </div>
+                        <div class="col s1"></div>
+                        <div class="col s3">
+                            <a href="/signout"><h7>Logout</h7></a>
+                        </div>
+                        <div class="col s12">
+                            <h7>Give it a like if you think the look is nice!</h7>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {{#each exploration}}
+          <div class="row" id="data1">
+            <div class="col s12 m7">
+              <div class="card">
+                <div>
+                      <div class="mdl-card mdl-cell--12-col">
+                              <form class="col s12">
+                                  <div class="row">
+                                      <div class="input-field col">
+                                          <img src="{{imageURL1}}" class="fakeitem1 explore" id="fake1">
+                                      </div>
+                                  </div>
+                              </form>
+                      </div>
+
+
+                                    <div class="row">
+                                        <div class="input-field col l2 m2 s2"></div>
+                                        <div class="input-field col l3 m3 s3" id = "fakedata1a">
+                                            <img src="{{imageURL1}}" class="fakeitem2 onview">
+                                        </div>
+                                        <div class="input-field col l2 m2 s2"></div>
+                                        <div class="input-field col l3 m3 s3" id = "fakedata1b">
+                                            <img src="{{imageURL2}}" class="fakeitem2">
+                                        </div>
+                                        <div class="input-field col l2 m2 s2"></div>
+                                        <div class="input-field col l12 m12 s12" id = "fakedataDescription">
+                                            <h5>{{ title }}</h5>
+                                            <h7>Liked by {{like}} People!</h7>
+                                        </div>
+                                    </div>
+
+                </div>
+                <div class="card-action">
+                  <a class="waves-effect waves-light btn skip"><i class="material-icons left">shuffle</i>NEXT</a>
+                  <a class="waves-effect waves-light btn before-like"><i class="material-icons left">favorite_border</i>LIKE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+
+    </main>
+
+</div>
+
+<div class="fixed-action-btn vertical" style="bottom: 5%; right: 5%;">
+    <div class="btn-floating btn-large orange accent-3">
+        <i class="large material-icons" id="filter" >sort</i>
+    </div>
+    <ul style="display: none">
+        <li id="tight_btn"><a class="btn-floating red" ><i class="material-icons" id="time">query_builder</i></a></li>
+        <li id="slacky_btn"><a class="btn-floating green"><i class="material-icons" id="likes">thumb_up</i></a></li>
+    </ul>
+</div>
+</body>
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script src="javascripts/indexAnimation.js" type="text/javascript"></script>
+</html>
