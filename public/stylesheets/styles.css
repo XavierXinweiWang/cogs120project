@@ -442,3 +442,19 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+#resultButtons a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 30%
+}
+
+#resultButtons #addCloth {
+  display: inline-block;
+  float: right;
+}
+
+.fakeitem2.tocompare {
+  height: 20vw !important;
+  width: 20vw !important;
+}

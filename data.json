@@ -66,7 +66,7 @@
 		},
     {
 			"title": "Yellow Tee",
-      "bottom": "top",
+      "bottom": "bottom",
 			"imageURL": "../images/tee-sun01-1000x1000.jpg"
 		},
     {
@@ -125,6 +125,28 @@
 			"like": "42",
 			"imageURL1": "../images/Baby-Clothes-Sales-1bojpfk0oyc.jpg",
 			"imageURL2": "../images/2878289015_6_1_1.jpg"
+		}
+	],
+  "clothes-min": [
+		{
+			"title": "White Shirt",
+      "top": "top",
+			"imageURL": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg"
+		},
+    {
+			"title": "Camel Blazer",
+      "top": "top",
+			"imageURL": "../images/vmo9g0yjsxsfcnlmmlxtrfcwyothw4n0.jpg"
+		},
+    {
+			"title": "Black Jacket",
+      "top": "top",
+			"imageURL": "../images/1255267800_6_1_1.jpg"
+		},
+    {
+			"title": "Blue Denim Shirt",
+      "top": "top",
+			"imageURL": "../images/5252206400_6_1_1.jpg"
 		}
 	]
 

@@ -14,6 +14,11 @@ var new_look = {
 
 var selected_clothes = [];
 
+var toUpload = "";
+
+var numUploaded = 0;
+
+
 $('#time').click(function()
 {
     $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark red');
@@ -159,7 +164,7 @@ $('#upload').click(function(){
     $('#fakeUpload').show();
     $('#uploadInstruction').hide();
     $('#resultPercentage').show();
-
+    $('#itemsToCompare').show();
 });
 
 $('#cancel').click(function(){
@@ -167,7 +172,7 @@ $('#cancel').click(function(){
     $('#fakeUpload').hide();
     $('#uploadInstruction').show();
     $('#resultPercentage').hide();
-
+    $('#itemsToCompare').hide();
 });
 
 $('#addCloth').click(function(){
@@ -176,12 +181,37 @@ $('#addCloth').click(function(){
     );
 });
 
-$("#history").find(".fakeitem2").click(function() {
-  $(".onview").removeClass("onview");
+$(".fakeitem2").click(function() {
+  $(this).parentsUntil(".row").parent().find(".onview").removeClass("onview");
   $(this).addClass("onview");
 });
 
-$("#history").find('#collection').on('click', '.fakeitem2', function() {
-  $(".onview").removeClass("onview");
+$('#collection').on('click', '.fakeitem2', function() {
+  $(this).parentsUntil(".row").parent().find(".onview").removeClass("onview");
   $(this).addClass("onview");
+});
+
+$("#addCloth").click(function() {
+  toUpload = "../images/rockmui_aloneteewhite-1000x1000.jpg";
+  sessionStorage.setItem("toUpload", toUpload);
+
+  numUploaded = sessionStorage.getItem("numUploaded");
+  if(numUploaded == null) {
+    numUploaded = 0;
+  }
+  numUploaded = JSON.parse(numUploaded);
+  numUploaded++;
+  sessionStorage.setItem("numUploaded", numUploaded);
+});
+
+$("index").ready(function(){
+  //var toUploadHere = sessionStorage.getItem("toUpload");
+  //console.log(toUploadHere);
+  var numUploadedX = sessionStorage.getItem("numUploaded");
+
+  for (var i = 0; i < numUploadedX; i++) {
+    $("#topGrid").prepend(
+      "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image'> <img src='../images/rockmui_aloneteewhite-1000x1000.jpg'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
+    );
+  }
 });
