@@ -203,7 +203,7 @@ $("index").ready(function(){
 
   for (var i = 0; i < numUploadedX; i++) {
     $("#topGrid").prepend(
-      "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image new'> <img src='../images/rockmui_aloneteewhite-1000x1000.jpg'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
+      "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image new'> <p style='display: none'>Black Text Tee</p> <img src='../images/rockmui_aloneteewhite-1000x1000.jpg'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
     );
   }
 });
