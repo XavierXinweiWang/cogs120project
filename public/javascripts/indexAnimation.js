@@ -38,7 +38,7 @@ $('.delete').click(function () {
 });
 
 $('.wear').click(function () {
-    $(this).parentsUntil("#data1").parent().find('#lastwear1').text(' Today');
+    $(this).parentsUntil("#data1").parent().find('#lastwear1').html("<i class='material-icons'>access_time</i>Today");
 });
 
 $('#to-all-clothes').click(function() {
