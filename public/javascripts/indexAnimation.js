@@ -22,13 +22,11 @@ var numUploaded = 0;
 $('#time').click(function()
 {
     $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark red');
-    $("#filter").attr('class', 'large material-icons red');
 });
 
 $('#likes').click(function()
 {
     $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark lime');
-    $("#filter").attr('class', 'large material-icons green');
 });
 
 $('.fakeitem2').click(function(){
@@ -43,19 +41,11 @@ $('.wear').click(function () {
     $(this).parentsUntil("#data1").parent().find('#lastwear1').text(' Today');
 });
 
-$('#to-saved-looks').click(function() {
-    $('#filter').parent().parent().show();
-    $('#filter').text("sort");
-    $('#filter').parent().parent().find("ul").show();
-});
-
 $('#to-all-clothes').click(function() {
     selected_clothes = [];
     selected = 0;
     $(".check-icon").hide();
-    $('#filter').parent().parent().show();
-    $('#filter').text("filter_list");
-    $('#filter').parent().parent().find("ul").hide();
+    //$('#filter').parent().parent().show();
 });
 
 $('#to-explore').click(function() {
@@ -86,9 +76,9 @@ $('#closet').find('.card-image').click(function() {
     }
 
     if (selected == 0) {
-        $('#filter').text("filter_list");
+        $('#filter').parent().parent().hide();
     } else {
-        $('#filter').text("done");
+        $('#filter').parent().parent().show();
     }
 });
 
@@ -134,8 +124,6 @@ $('#filter').click(function() {
         selected_clothes = [];
         selected = 0;
 
-        $('#filter').text("sort");
-        $('#filter').parent().parent().find("ul").show();
         $('#filter').parent().parent().hide();
     }
 });
@@ -231,8 +219,8 @@ $('#topGrid').on('click', '.card-image.new', function() {
     }
 
     if (selected == 0) {
-        $('#filter').text("filter_list");
+        $('#filter').parent().parent().hide();
     } else {
-        $('#filter').text("done");
+        $('#filter').parent().parent().show();
     }
 });
