@@ -39,6 +39,10 @@ $('.delete').click(function () {
 
 $('.wear').click(function () {
     $(this).parentsUntil("#data1").parent().find('#lastwear1').html("<i class='material-icons'>access_time</i>Today");
+    if($(this).parentsUntil("#data1").parent().find('#lastwear1').text() == 'access_timeToday') {
+      var data = {message: "You have already worn it today."};
+      document.querySelector('#wear-snackbar').MaterialSnackbar.showSnackbar(data);
+    }
 });
 
 $('#to-all-clothes').click(function() {
