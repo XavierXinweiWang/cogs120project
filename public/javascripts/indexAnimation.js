@@ -141,6 +141,15 @@ $('#collection').on('click', '.fakeitem2', function() {
     $(this).parentsUntil("#data1").parent().find("#fake1").attr('src', $(this).attr("src"));
 });
 
+$('#collection').on('click', '.wear', function() {
+  if($(this).parentsUntil("#data1").parent().find('#lastwear1').text() == 'access_timeToday') {
+    var data = {message: "You have already worn it today."};
+    document.querySelector('#wear-snackbar').MaterialSnackbar.showSnackbar(data);
+  } else {
+    $(this).parentsUntil("#data1").parent().find('#lastwear1').html("<i class='material-icons'>access_time</i>Today");
+  }
+});
+
 $('.card-action').on('click', '.before-like', function(){
     if ($(this).find("i").html()=='favorite_border'){
         $(this).find("i").html('favorite');
