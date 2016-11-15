@@ -171,6 +171,9 @@ $('#cancel').click(function(){
 $(".fakeitem2").click(function() {
     $(this).parentsUntil(".row").parent().find(".onview").removeClass("onview");
     $(this).addClass("onview");
+    if($(this).parent().parent().attr('id') == 'itemsToCompare') {
+      $('#resultPercentage').find('h5').show();
+    }
 });
 
 $('#collection').on('click', '.fakeitem2', function() {
