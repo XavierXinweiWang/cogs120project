@@ -55,33 +55,27 @@
 
         <div class="mdl-card mdl-cell--12-col">
             <div class="mdl-card mdl-cell mdl-cell--12-col" id="form">
-                <form class="col s12" action="/login" method="POST">
+                <form class="col s12" action="/signup" method="POST">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="username" type="text" class="validate">
+                            <input name="username" type="text" required="required" class="validate">
                             <label for="username">Username</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="password" type="password" class="validate">
+                            <input name="password" type="password" required="required" class="validate">
                             <label for="password">Passward</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="comfirmpassword" type="password" class="validate">
-                            <label for="comfirmpassword">Confirm Password</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" type="text" class="validate">
+                            <input name="email" type="email" required="required" class="validate">
                             <label for="email">Email</label>
                         </div>
                     </div>
                     <div class="row">
-                        <a href="/home" class="waves-effect waves-light btn col s6" type="submit">Sign Up</a>
+                        <button id="a" type="submit" class="waves-effect waves-light btn col s6">Register</button>
                     </div>
 
                 </form>

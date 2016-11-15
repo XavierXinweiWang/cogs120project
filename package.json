@@ -12,6 +12,19 @@
     "express": "~4.13.4",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "async": "^2.0.0-rc.4",
+    "bcrypt": "^0.8.6",
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "*",
+    "ejs": "^2.4.1",
+    "express-session": "^1.13.0",
+    "express-validator": "^2.20.4",
+    "mongoose": "^4.4.14",
+    "nodemailer": "^2.3.2",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "static-favicon": "*"
   }
 }

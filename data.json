@@ -3,100 +3,100 @@
 		{
 			"title": "White Shirt, Blue Pant",
 			"date": "10/30/2016",
-      "like": "42",
+			"like": "42",
 			"imageURL1": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
-      "imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+			"imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
 		},
-    {
+		{
 			"title": "Grey Sweater, Cherry Chino",
-      "date": "10/29/2016",
-      "like": "42",
-      "imageURL1": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
-      "imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+			"date": "10/29/2016",
+			"like": "42",
+			"imageURL1": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
+			"imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
 		},{
 			"title": "Colorful Dress",
-      "date": "10/28/2016",
-      "like": "42",
-      "imageURL1": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
-      "imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+			"date": "10/28/2016",
+			"like": "42",
+			"imageURL1": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
+			"imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
 		},{
 			"title": "Blue Denim Shirt, White Pant",
-      "date": "10/27/2016",
-      "like": "42",
-      "imageURL1": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
-      "imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+			"date": "10/27/2016",
+			"like": "42",
+			"imageURL1": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
+			"imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
 		},{
 			"title": "Yellow Shirt, Blue Pant",
-      "date": "10/26/2016",
-      "like": "42",
-      "imageURL1": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
-      "imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
+			"date": "10/26/2016",
+			"like": "42",
+			"imageURL1": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg",
+			"imageURL2": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
 		}
 	],
 	"clothes": [
 		{
 			"title": "White Shirt",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg"
 		},
-    {
+		{
 			"title": "Camel Blazer",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/vmo9g0yjsxsfcnlmmlxtrfcwyothw4n0.jpg"
 		},
-    {
+		{
 			"title": "Black Jacket",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/1255267800_6_1_1.jpg"
 		},
-    {
+		{
 			"title": "Blue Denim Shirt",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/5252206400_6_1_1.jpg"
 		},
-    {
+		{
 			"title": "Snoopy Olive Tee",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/4644272507_6_1_1.jpg"
 		},
-    {
+		{
 			"title": "Mint Tee",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/tee-mint01-1000x1000.jpg"
 		},
-    {
+		{
 			"title": "Yellow Tee",
-      "bottom": "bottom",
+			"bottom": "bottom",
 			"imageURL": "../images/tee-sun01-1000x1000.jpg"
 		},
-    {
+		{
 			"title": "Blue Pant",
-      "bottom": "bottom",
+			"bottom": "bottom",
 			"imageURL": "../images/coralfront-1000x1000.jpg"
 		},
-    {
+		{
 			"title": "Blue Chino",
-      "bottom": "bottom",
+			"bottom": "bottom",
 			"imageURL": "../images/hlw8n1ufuhk40yvuq0x0xltssuw3b2tg.jpg"
 		},
-    {
+		{
 			"title": "White & Black Pant",
-      "bottom": "bottom",
+			"bottom": "bottom",
 			"imageURL": "../images/ORLEBAR_BROWN_BULLDOG_MOUNTAIN_FOREST_MIST_GREY_263554_FRONT_L.jpg"
 		},
-    {
+		{
 			"title": "Grey Dress",
-      "one-piece": "one-piece",
+			"one-piece": "one-piece",
 			"imageURL": "../images/5584318803_6_1_1.jpg"
 		},
-    {
+		{
 			"title": "Colorful Dress",
-      "one-piece": "one-piece",
+			"one-piece": "one-piece",
 			"imageURL": "../images/2878289015_6_1_1.jpg"
 		},
-    {
+		{
 			"title": "Black Dress",
-      "one-piece": "one-piece",
+			"one-piece": "one-piece",
 			"imageURL": "../images/1255203800_6_1_1.jpg"
 		}
 	],
@@ -127,25 +127,25 @@
 			"imageURL2": "../images/2878289015_6_1_1.jpg"
 		}
 	],
-  "clothes-min": [
+	"clothes-min": [
 		{
 			"title": "White Shirt",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/SHIRT_UnbuttonDown_WashedOxford_WhiteOxford_category.jpg"
 		},
-    {
+		{
 			"title": "Camel Blazer",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/vmo9g0yjsxsfcnlmmlxtrfcwyothw4n0.jpg"
 		},
-    {
+		{
 			"title": "Black Jacket",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/1255267800_6_1_1.jpg"
 		},
-    {
+		{
 			"title": "Blue Denim Shirt",
-      "top": "top",
+			"top": "top",
 			"imageURL": "../images/5252206400_6_1_1.jpg"
 		}
 	]

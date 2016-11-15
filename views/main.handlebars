@@ -58,24 +58,32 @@
                 <form class="col s12 form-signin" action="/login" method="POST">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="username" type="text" class="validate">
+                            <input name="username" type="text" required="required" class="validate">
                             <label for="username">Username</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="password" type="password" class="validate">
+                            <input name="password" type="password" required="required" class="validate">
                             <label for="password">Passward</label>
                         </div>
                     </div>
                     <div class="row">
-                        <a href="/home" class="waves-effect waves-light btn col s6" type="submit">Log In</a>
+                        <div class="input-field col s12">
+                            <a href="/forgetPassword"><h7>Forget Password?</h7><br><br></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <button id="a" type="submit" class="waves-effect waves-light btn col s6">Log in</button>
                         <a href="/register" class="waves-effect waves-light btn col s6" type="submit">Register</a>
                     </div>
 
                 </form>
             </div>
         </div>
+
+
 
     </main>
 
