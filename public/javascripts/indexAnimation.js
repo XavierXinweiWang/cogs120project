@@ -199,19 +199,19 @@ $('#collection').on('click', '.fakeitem2', function() {
 
 $("#addCloth").click(function() {
     toUpload = "../images/rockmui_aloneteewhite-1000x1000.jpg";
-    sessionStorage.setItem("toUpload", toUpload);
+    localStorage.setItem("toUpload", toUpload);
 
-    numUploaded = sessionStorage.getItem("numUploaded");
+    numUploaded = localStorage.getItem("numUploaded");
     if(numUploaded == null) {
         numUploaded = 0;
     }
     numUploaded = JSON.parse(numUploaded);
     numUploaded++;
-    sessionStorage.setItem("numUploaded", numUploaded);
+    localStorage.setItem("numUploaded", numUploaded);
 });
 
 $("index").ready(function(){
-    var numUploadedX = sessionStorage.getItem("numUploaded");
+    var numUploadedX = localStorage.getItem("numUploaded");
 
     for (var i = 0; i < numUploadedX; i++) {
         $("#topGrid").prepend(
