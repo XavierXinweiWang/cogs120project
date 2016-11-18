@@ -87,8 +87,13 @@ module.exports = function(passport) {
 
   /* GET home page. */
   router.get('/home', isAuthenticated, function (req, res, next) {
-    res.render('alternateindex', data);
+    res.render('index', data);
   });
+
+  /* GET alternate home page. */
+    router.get('/home2', isAuthenticated, function (req, res, next) {
+        res.render('alternateindex', data);
+    });
 
   /* GET storage page. */
   router.get('/compare', function (req, res, next) {
