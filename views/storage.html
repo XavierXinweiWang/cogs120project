@@ -43,20 +43,6 @@
     <script type="text/javascript" src="javascripts/materialize.min.js"></script>
     <script type="text/javascript" src="javascripts/select2.min.js"></script>
 
-
-
-        <!-- Google Analytics script -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-87944255-1', 'auto');
-          ga('send', 'pageview');
-
-        </script>
-
 </head>
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -69,7 +55,7 @@
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-3" id="toolbar">
-            <a href="/home" class=" mdl-layout__tab"><i class="material-icons" style="padding-top: 5vw">arrow_back</i></a>
+            <a href="/" class=" mdl-layout__tab"><i class="material-icons" style="padding-top: 5vw">arrow_back</i></a>
             <a href="#compare" class="mdl-layout__tab is-active">Compare Similarity</a>
 
         </div>
@@ -78,58 +64,10 @@
     <main class="mdl-layout__content">
 
         <div class="mdl-layout__tab-panel is-active" id="compare">
-            <div>
-                <form class="col s12">
-                    <div class="row">
-                        <div class="col s8">
-                            <h7>Be a wise buyer!</h7>
-                        </div>
-                        <div class="col s1"></div>
-                        <div class="col s3">
-                            <a href="/signout" id="logout"><h7>Logout</h7></a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="row" id="data1">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div>
-                            <div class="mdl-card mdl-cell--12-col">
-                                <form class="col s12">
-                                    <div class="row">
-                                        <div class="card-image" id="upload">
-                                            <img class="icon icons8-Upload-to-Cloud" src="/images/cloud_upload_grey_192x192.png" id="uploadIcon">
-                                            <img src="/images/rockmui_aloneteewhite-1000x1000.jpg" id="fakeUpload">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="row" style="display: none" id="itemsToCompare">
-                                {{#each clothes-min}}
-                                    <div class="input-field col l3 m3 s3">
-                                        <img src="{{imageURL}}" class="fakeitem2 tocompare">
-                                    </div>
-                                {{/each}}
-                            </div>
-
-
-                        </div>
-
-                        <div class="card-action">
-                            <h7 id="uploadInstruction">Upload the cloth you want to buy</h7>
-                            <div id="resultPercentage">
-                                <h5 style="display: none">Similarity: 50%</h5>
-                                <div class="row" id="resultButtons">
-                                    <a class="waves-effect waves-light btn col s6 red" type="submit" id="cancel">Cancel</a>
-                                    <a href="/home" class="waves-effect waves-light btn col s6" type="submit" id="addCloth">Buy It!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p>This page is supposed to let you upload pictures and compare similarity with the clothes in your closet.</p>
+            <p>This Function is being implemented right now, plz be patient~</p>
+            <p>Your Sincerely,</p>
+            <p>TEAM DECAF</p>
         </div>
 
     </main>

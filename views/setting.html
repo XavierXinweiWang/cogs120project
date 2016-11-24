@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Forget Password</title>
+    <title>Index</title>
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <!--<link rel="icon" sizes="192x192" href="images/android-desktop.png">-->
@@ -33,63 +34,50 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css" media="screen,projection" />
     <!--Import select2.css-->
-    <link type="text/css" rel="stylesheet" href="stylesheets/select2.min.css"/>
+    <link type="text/css" rel="stylesheet" href="stylesheets/select2.min.css" />
 
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="javascripts/materialize.min.js"></script>
     <script type="text/javascript" src="javascripts/select2.min.js"></script>
 
 
-
-        <!-- Google Analytics script -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-87944255-1', 'auto');
-          ga('send', 'pageview');
-
-        </script>
-
+    <!--<link rel="stylesheet" href="stylesheets/index.css">-->
 </head>
-<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary" id="header">
-        <div class="mdl-layout__header-row">
-            <h1 style="font-family: lazyyyfont; font-size: 13vw">Vestiarium</h1>
-        </div>
-    </header>
-    <main class="mdl-layout__content">
 
-        <div class="mdl-card mdl-cell--12-col">
-            <div class="mdl-card mdl-cell mdl-cell--12-col" id="form">
-                <form class="col s12" action="/forgot" method="POST">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input name="email" type="email" required="required" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <button id="a" type="submit" class="waves-effect waves-light btn col s12">Send Reset Password Email</button>
-                    </div>
-
-                </form>
+<body>
+    <div>
+        <header id="header">
+            <div class="topbar">
+                <a href="index.html" class="title">
+                    <h1 style="font-family: lazyyyfont">Vestiarium</h1>
+                </a>
+                <div class="drawer">
+                    <button class="drawer_button">
+                        Drawer: This button will pull out the drawer
+                    </button>
+                    <nav class="drawer_content" style="visibility: none">
+                        <a href="javascript:void(0)" class="closebtn">&times;</a>
+                        <a href="index.html">Home Page</a>
+                        <a href="explore.html">Explore</a>
+                        <a href="setting.html">Setting</a>
+                        <a href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+                <a href="compare.html">
+                    <button class="camera">
+                        <img src="#" alt="Camera: click here to take a new photo or upload from album">
+                    </button>
+                </a>
             </div>
-        </div>
-
-    </main>
-
-</div>
-
-
+        </header>
+        <main>
+            <p>This is a page for setting</p>
+        </main>
+    </div>
 </body>
-<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-<script src="javascripts/indexAnimation.js" type="text/javascript"></script>
+
 </html>

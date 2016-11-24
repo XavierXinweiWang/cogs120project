@@ -22,13 +22,11 @@ var numUploaded = 0;
 $('#time').click(function()
 {
     $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark red');
-    $("#filter").attr('class', 'large material-icons red');
 });
 
 $('#likes').click(function()
 {
     $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark lime');
-    $("#filter").attr('class', 'large material-icons green');
 });
 
 $('.fakeitem2').click(function(){
@@ -39,23 +37,22 @@ $('.delete').click(function () {
     $(this).parentsUntil("#collection").fadeOut(500);
 });
 
-$('.wear').click(function () {
-    $(this).parentsUntil("#data1").parent().find('#lastwear1').text(' Today');
+/*$('.wear').click(function () {
+    if($(this).parentsUntil("#data1").parent().find('#lastwear1').text() == 'access_timeToday') {
+      console.log($(this).parentsUntil("#data1").parent().find('#lastwear1').text());
+      var data = {message: "You have already worn it today."};
+      document.querySelector('#wear-snackbar').MaterialSnackbar.showSnackbar(data);
+    } else {
+      $(this).parentsUntil("#data1").parent().find('#lastwear1').html("<i class='material-icons'>access_time</i>Today");
+    }
 });
-
-$('#to-saved-looks').click(function() {
-    $('#filter').parent().parent().show();
-    $('#filter').text("sort");
-    $('#filter').parent().parent().find("ul").show();
-});
+*/
 
 $('#to-all-clothes').click(function() {
     selected_clothes = [];
     selected = 0;
     $(".check-icon").hide();
-    $('#filter').parent().parent().show();
-    $('#filter').text("filter_list");
-    $('#filter').parent().parent().find("ul").hide();
+    //$('#filter').parent().parent().show();
 });
 
 $('#to-explore').click(function() {
@@ -86,9 +83,9 @@ $('#closet').find('.card-image').click(function() {
     }
 
     if (selected == 0) {
-        $('#filter').text("filter_list");
+        $('#filter').parent().parent().hide();
     } else {
-        $('#filter').text("done");
+        $('#filter').parent().parent().show();
     }
 });
 
@@ -120,7 +117,7 @@ $('#filter').click(function() {
         }
 
         $("#collection").prepend(
-            "<li id='data1'><div class='collapsible-header'><section class='section--center mdl-grid mdl-grid--no-spacing'><div class='mdl-card mdl-cell--12-col'><div class='mdl-card mdl-cell mdl-cell--12-col' id='form'><form class='col s12'><div class='row'><div class='input-field col l6 m6 s6'><img src='" + new_look.imageURL1 + "' class='fakeitem1' id='fake1'></div><div class='input-field col l6 m6 s6'><p>" + new_look.title + "</p><p id='lastwear1'><i class='material-icons'>access_time</i>" + new_look.date + "</p><p id='like1'><i class='material-icons'>favorite</i>" + new_look.like + "likes</p></div></div></form></div></div></section></div><div class='collapsible-body'><section class='section--center mdl-grid mdl-grid--no-spacing'><div class='mdl-card mdl-cell--12-col'><div class='mdl-card mdl-cell mdl-cell--12-col'><form class='col s12'><div class='row'><div class='input-field col l3 m3 s3'></div><div class='input-field col l3 m3 s3' id = 'fakedata1a'><img src='" + new_look.imageURL1 + "' class='fakeitem2 onview'></div><div class='input-field col l3 m3 s3' id = 'fakedata1b'><img src='" + new_look.imageURL2 + "' class='fakeitem2'></div><div class='input-field col l6 m6 s6'><a class='mdl-button mdl-js-button mdl-button--accent delete' style='width: 100%' id='delete1'>DELETE</a></div><div class='input-field col l6 m6 s6'><a class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent wear' style='width: 100%' id='wear1'>WEAR</a></div></div></form></div></div></section></div></li>"
+            "<li id='data1'><div class='collapsible-header'><section class='section--center mdl-grid mdl-grid--no-spacing'><div class='mdl-card mdl-cell--12-col'><div class='mdl-card mdl-cell mdl-cell--12-col' id='form'><form class='col s12'><div class='row'><div class='input-field col l6 m6 s6'><img src='" + new_look.imageURL1 + "' class='fakeitem1' id='fake1'></div><div class='input-field col l6 m6 s6'><p>" + new_look.title + "</p><p id='lastwear1'><i class='material-icons'>access_time</i>" + new_look.date + "</p><p id='like1'><i class='material-icons'>favorite</i>" + new_look.like + " likes</p></div></div></form></div></div></section></div><div class='collapsible-body'><section class='section--center mdl-grid mdl-grid--no-spacing'><div class='mdl-card mdl-cell--12-col'><div class='mdl-card mdl-cell mdl-cell--12-col'><form class='col s12'><div class='row'><div class='input-field col l3 m3 s3'></div><div class='input-field col l3 m3 s3' id = 'fakedata1a'><img src='" + new_look.imageURL1 + "' class='fakeitem2 onview'></div><div class='input-field col l3 m3 s3' id = 'fakedata1b'><img src='" + new_look.imageURL2 + "' class='fakeitem2'></div><div class='input-field col l6 m6 s6'><a class='mdl-button mdl-js-button mdl-button--accent delete' style='width: 100%' id='delete1'>DELETE</a></div><div class='input-field col l6 m6 s6'><a class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent wear' style='width: 100%' id='wear1'>WEAR</a></div></div></form></div></div></section></div></li>"
         );
 
         new_look = {
@@ -134,8 +131,6 @@ $('#filter').click(function() {
         selected_clothes = [];
         selected = 0;
 
-        $('#filter').text("sort");
-        $('#filter').parent().parent().find("ul").show();
         $('#filter').parent().parent().hide();
     }
 });
@@ -146,6 +141,15 @@ $('#collection').on('click', '.delete', function() {
 
 $('#collection').on('click', '.fakeitem2', function() {
     $(this).parentsUntil("#data1").parent().find("#fake1").attr('src', $(this).attr("src"));
+});
+
+$('#collection').on('click', '.wear', function() {
+  if($(this).parentsUntil("#data1").parent().find('#lastwear1').text() == 'access_timeToday') {
+    var data = {message: "You have already worn it today."};
+    document.querySelector('#wear-snackbar').MaterialSnackbar.showSnackbar(data);
+  } else {
+    $(this).parentsUntil("#data1").parent().find('#lastwear1').html("<i class='material-icons'>access_time</i>Today");
+  }
 });
 
 $('.card-action').on('click', '.before-like', function(){
@@ -161,6 +165,9 @@ $('.card-action').on('click', '.skip', function(){
     $(this).parentsUntil("#explore").fadeOut(500);
 });
 
+$('.alternateNext').on('click', '.skip', function(){
+    $(this).parentsUntil("#explore").fadeOut(500);
+});
 
 $('#fakeUpload').hide();
 $('#resultPercentage').hide();
@@ -183,6 +190,9 @@ $('#cancel').click(function(){
 $(".fakeitem2").click(function() {
     $(this).parentsUntil(".row").parent().find(".onview").removeClass("onview");
     $(this).addClass("onview");
+    if($(this).parent().parent().attr('id') == 'itemsToCompare') {
+      $('#resultPercentage').find('h5').show();
+    }
 });
 
 $('#collection').on('click', '.fakeitem2', function() {
@@ -192,19 +202,19 @@ $('#collection').on('click', '.fakeitem2', function() {
 
 $("#addCloth").click(function() {
     toUpload = "../images/rockmui_aloneteewhite-1000x1000.jpg";
-    sessionStorage.setItem("toUpload", toUpload);
+    localStorage.setItem("toUpload", toUpload);
 
-    numUploaded = sessionStorage.getItem("numUploaded");
+    numUploaded = localStorage.getItem("numUploaded");
     if(numUploaded == null) {
         numUploaded = 0;
     }
     numUploaded = JSON.parse(numUploaded);
     numUploaded++;
-    sessionStorage.setItem("numUploaded", numUploaded);
+    localStorage.setItem("numUploaded", numUploaded);
 });
 
 $("index").ready(function(){
-    var numUploadedX = sessionStorage.getItem("numUploaded");
+    var numUploadedX = localStorage.getItem("numUploaded");
 
     for (var i = 0; i < numUploadedX; i++) {
         $("#topGrid").prepend(
@@ -231,8 +241,18 @@ $('#topGrid').on('click', '.card-image.new', function() {
     }
 
     if (selected == 0) {
-        $('#filter').text("filter_list");
+        $('#filter').parent().parent().hide();
     } else {
-        $('#filter').text("done");
+        $('#filter').parent().parent().show();
     }
+});
+
+$('.A-Version').click(function() {
+  console.log("next clicked");
+  ga('send', 'event', 'to-next', 'click', 'A-Version');
+});
+
+$('.B-Version').click(function() {
+  console.log("arrow clicked");
+  ga('send', 'event', 'to-next', 'click', 'B-Version');
 });
