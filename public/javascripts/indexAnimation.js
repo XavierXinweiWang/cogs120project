@@ -165,6 +165,9 @@ $('.card-action').on('click', '.skip', function(){
     $(this).parentsUntil("#explore").fadeOut(500);
 });
 
+$('.alternateNext').on('click', '.skip', function(){
+    $(this).parentsUntil("#explore").fadeOut(500);
+});
 
 $('#fakeUpload').hide();
 $('#resultPercentage').hide();
