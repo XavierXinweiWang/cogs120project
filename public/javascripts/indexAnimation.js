@@ -246,3 +246,13 @@ $('#topGrid').on('click', '.card-image.new', function() {
         $('#filter').parent().parent().show();
     }
 });
+
+$('.A-Version').click(function() {
+  console.log("next clicked");
+  ga('send', 'event', 'A-Version', 'click');
+});
+
+$('.B-Version').click(function() {
+  console.log("arrow clicked");
+  ga('send', 'event', 'B-Version', 'click');
+});

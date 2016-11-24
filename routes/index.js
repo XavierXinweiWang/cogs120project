@@ -87,13 +87,15 @@ module.exports = function(passport) {
 
   /* GET home page. */
   router.get('/home', isAuthenticated, function (req, res, next) {
+    data['bversion'] = false;
     res.render('index', data);
   });
 
   /* GET alternate home page. */
-    router.get('/home2', isAuthenticated, function (req, res, next) {
-        res.render('alternateindex', data);
-    });
+  router.get('/home2', isAuthenticated, function (req, res, next) {
+    data['bversion'] = true;
+    res.render('index', data);
+  });
 
   /* GET storage page. */
   router.get('/compare', function (req, res, next) {

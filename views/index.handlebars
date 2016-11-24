@@ -263,6 +263,7 @@
                     </div>
                 </form>
             </div>
+            {{#if bversion}}
             {{#each exploration}}
           <div class="row" id="data1">
             <div class="col s12 m7">
@@ -297,13 +298,57 @@
 
                 </div>
                 <div class="card-action">
-                  <a class="waves-effect waves-light btn skip"><i class="material-icons left">shuffle</i>NEXT</a>
+                  <a class="waves-effect waves-light btn skip A-Version"><i class="material-icons left">shuffle</i>NEXT</a>
                   <a class="waves-effect waves-light btn before-like"><i class="material-icons left">favorite_border</i>LIKE</a>
                 </div>
               </div>
             </div>
           </div>
           {{/each}}
+          {{else}}
+          {{#each exploration}}
+              <div class="row" id="data1">
+                  <div class="col s12 m7">
+                      <div class="card">
+                          <div>
+                              <div class="mdl-card mdl-cell--12-col">
+                                  <form class="col s12">
+                                      <div class="row">
+                                          <div class="input-field col">
+                                              <img src="{{imageURL1}}" class="fakeitem1 explore" id="fake1">
+                                          </div>
+                                      </div>
+                                  </form>
+                              </div>
+
+                              <a class="btn-floating btn-small alternateNext B-Version"><i class="material-icons skip">trending_flat</i></a>
+
+                              <div class="row">
+                                  <div class="input-field col l2 m2 s2"></div>
+                                  <div class="input-field col l3 m3 s3" id = "fakedata1a">
+                                      <img src="{{imageURL1}}" class="fakeitem2 onview">
+                                  </div>
+                                  <div class="input-field col l2 m2 s2"></div>
+                                  <div class="input-field col l3 m3 s3" id = "fakedata1b">
+                                      <img src="{{imageURL2}}" class="fakeitem2">
+                                  </div>
+                                  <div class="input-field col l2 m2 s2"></div>
+                                  <div class="input-field col l12 m12 s12" id = "fakedataDescription">
+                                      <h5>{{ title }}</h5>
+                                      <h7>Liked by {{like}} People!</h7>
+                                      <br>
+                                  </div>
+                              </div>
+
+                          </div>
+                          <div class="card-action">
+                              <a class="waves-effect waves-light btn before-like" style="left: 50vw"><i class="material-icons left">favorite_border</i>LIKE</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          {{/each}}
+          {{/if}}
         </div>
 
     </main>
