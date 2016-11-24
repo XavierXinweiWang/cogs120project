@@ -249,10 +249,10 @@ $('#topGrid').on('click', '.card-image.new', function() {
 
 $('.A-Version').click(function() {
   console.log("next clicked");
-  ga('send', 'event', 'A-Version', 'click');
+  ga('send', 'event', 'to-next', 'click', 'A-Version');
 });
 
 $('.B-Version').click(function() {
   console.log("arrow clicked");
-  ga('send', 'event', 'B-Version', 'click');
+  ga('send', 'event', 'to-next', 'click', 'B-Version');
 });
