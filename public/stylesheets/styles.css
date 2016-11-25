@@ -416,6 +416,12 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
   padding-right: 1rem;
 }
 
+.alternateNext{
+    float: right;
+    right: 1.5vw;
+    top: -7vw;
+}
+
 .explore.fakeitem1 {
   width: 50vw;
   height: 50vw;
