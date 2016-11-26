@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+ @font-face {
+   font-family: Roboto-Medium;
+   src: url('../fonts/roboto/Roboto-Medium.ttf'));
+ }
+
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
@@ -33,10 +38,10 @@ html, body {
 }
 .mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,
 .mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
-  overflow: visible;
+  overflow: scroll;
 }
 .mdl-demo .mdl-layout__tab-bar-container {
-  height: 64px;
+  height: 56px;
 }
 .mdl-demo .mdl-layout__tab-bar {
   padding: 0;
@@ -46,11 +51,11 @@ html, body {
   width: 100%;
 }
 .mdl-demo .mdl-layout__tab-bar .mdl-layout__tab {
-  height: 64px;
-  line-height: 64px;
+  height: 48px;
+  line-height: 48px;
 }
 .mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {
-  background-color: white;
+  background-color: #ff80ab;
   height: 4px;
 }
 .mdl-demo main > .mdl-layout__tab-panel {
@@ -88,7 +93,6 @@ html, body {
   color: inherit;
 }
 .mdl-demo .mdl-card__actions a {
-  color: #00BCD4;
   margin: 0;
 }
 .mdl-demo .mdl-card__actions a:hover,
@@ -238,10 +242,7 @@ html, body {
 }
 
 #header{
-  background-image: url("../images/Baby-Clothes-Sales-1bojpfk0oyc.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -25vw;
+  height: 64px;
 }
 
 @font-face {
@@ -407,7 +408,7 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
 
 .onview {
   padding: 3px !important;
-  background-color: rgb(255,64,129) !important;
+  background-color: #ff80ab !important;
   border-color: black !important;
 }
 
@@ -431,15 +432,14 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
 }
 
 #explore #data1 {
-  position: fixed;
-  top: 20vh;
+  position: absolute;
 }
-
+/*
 #explore {
   padding-top: 16px;
   padding-bottom: 0px;
   background: none;
-}
+}*/
 
 #fakedataDescription h5 {
   height: 25px;
@@ -463,4 +463,54 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
 .fakeitem2.tocompare {
   height: 20vw !important;
   width: 20vw !important;
+}
+
+
+
+/* Final Style Modification */
+#toolbar {
+  padding-left: 0px;
+  height: 48px;
+}
+
+#toolbar a {
+  width: 36vw;
+}
+
+#toolbar #to-explore {
+  width: 28vw;
+}
+
+#to-upload {
+  position: fixed;
+  right: 5vw;
+}
+
+#topbar {
+  padding-left: 5vw;
+}
+
+#app-name {
+  font-size: 24px;
+}
+
+.card h5 {
+  padding-top: 1vw;
+}
+
+ul.list {
+  margin-top: 0px;
+}
+
+h2.mdl-layout__header-row {
+  font-size: 20px;
+  padding: 0px !important;
+}
+
+#arrow-back {
+  width: 48px !important;
+}
+
+#compare {
+  padding-top: 3vw;
 }

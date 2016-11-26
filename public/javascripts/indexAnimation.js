@@ -19,16 +19,6 @@ var toUpload = "";
 var numUploaded = 0;
 
 
-$('#time').click(function()
-{
-    $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark red');
-});
-
-$('#likes').click(function()
-{
-    $("#toolbar").attr('class', 'mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark lime');
-});
-
 $('.fakeitem2').click(function(){
     $(this).parentsUntil("#data1").parent().find("#fake1").attr('src', $(this).attr("src"));
 });
