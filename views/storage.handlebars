@@ -28,7 +28,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-pink.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css" />
     <link rel="stylesheet" href="stylesheets/styles.css">
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -60,20 +60,11 @@
 </head>
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary" id="header">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+    <header class="mdl-layout__header mdl-layout__header--scroll blue-grey lighten-5" id="header" style="height: 48px">
+        <div class="mdl-layout__tab-bar blue-grey lighten-5" id="toolbar" style="height: 48px">
+            <a href="/home" class=" mdl-layout__tab" id="arrow-back"><i class="material-icons" style="padding-top: 5vw">arrow_back</i></a>
+            <h2 href="#compare" class="mdl-layout__header-row">Compare Similarity</h2>
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-            <h1 style="font-family: lazyyyfont">Vestiarium</h1>
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-3" id="toolbar">
-            <a href="/home" class=" mdl-layout__tab"><i class="material-icons" style="padding-top: 5vw">arrow_back</i></a>
-            <a href="#compare" class="mdl-layout__tab is-active">Compare Similarity</a>
-
-        </div>
-
     </header>
     <main class="mdl-layout__content">
 
@@ -99,13 +90,25 @@
                                 <form class="col s12">
                                     <div class="row">
                                         <div class="card-image" id="upload">
-                                            <img class="icon icons8-Upload-to-Cloud" src="/images/cloud_upload_grey_192x192.png" id="uploadIcon">
-                                            <img src="/images/rockmui_aloneteewhite-1000x1000.jpg" id="fakeUpload">
+                                          <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                              <input class="mdl-textfield__input" type="text" id="title_input">
+                                              <label class="mdl-textfield__label" for="title_input">Name it if you want!</label>
+                                            </div>
+                                          </form>
+                                          {{#each clothes}}
+                                              <div class="input-field col l3 m3 s3">
+                                                  <img src="{{imageURL}}" class="fakeitem2 tocompare" alt="{{title}}">
+                                                  <p class="category" style="display: none">{{top}}{{bottom}}{{one_piece}}</p>
+                                              </div>
+                                          {{/each}}
+                                        </div>
+                                        <div class="card-image" id="after-upload">
+
                                         </div>
                                     </div>
                                 </form>
                             </div>
-
                             <div class="row" style="display: none" id="itemsToCompare">
                                 {{#each clothes-min}}
                                     <div class="input-field col l3 m3 s3">
@@ -118,12 +121,14 @@
                         </div>
 
                         <div class="card-action">
-                            <h7 id="uploadInstruction">Upload the cloth you want to buy</h7>
+                            <h7 id="uploadInstruction">Choose one image</h7>
+                            <a class="waves-effect waves-light btn pink accent-2 disabled" id="upload-confirm"><i class="material-icons left">file_upload</i>UPLOAD</a>
                             <div id="resultPercentage">
+                                <h5>Similar Items Found!</h5>
                                 <h5 style="display: none">Similarity: 50%</h5>
                                 <div class="row" id="resultButtons">
-                                    <a class="waves-effect waves-light btn col s6 red" type="submit" id="cancel">Cancel</a>
-                                    <a href="/home" class="waves-effect waves-light btn col s6" type="submit" id="addCloth">Buy It!</a>
+                                    <a class="waves-effect waves-light btn col s6 pink accent-2" type="submit" id="cancel">Cancel</a>
+                                    <a href="/home" class="waves-effect waves-light btn col s6 pink accent-2" type="submit" id="addCloth">Buy It!</a>
                                 </div>
                             </div>
                         </div>

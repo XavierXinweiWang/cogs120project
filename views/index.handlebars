@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Google Analytics Content Experiment code -->
-  <script>function utmx_section(){}function utmx(){}(function(){var
+  <!--script>function utmx_section(){}function utmx(){}(function(){var
   k='134479385-0',d=document,l=d.location,c=d.cookie;
   if(l.search.indexOf('utm_expid='+k)>0)return;
   function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
@@ -13,23 +13,8 @@
   '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
   valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
+  </script><script>utmx('url','A/B');</script-->
   <!-- End of Google Analytics Content Experiment code -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <meta charset="UTF-8">
@@ -58,8 +43,9 @@
   -->
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-pink.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css" />
     <link rel="stylesheet" href="stylesheets/styles.css">
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -92,21 +78,16 @@
 </head>
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary" id="header">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+    <header class="mdl-layout__header mdl-layout__header--scroll blue-grey lighten-5" id="header">
+        <div class="mdl-layout__header-row" id="topbar">
+            <h1 id="app-name">Fashionopia</h1>
+            <a href="/compare" class=" mdl-layout__tab mdl-js-ripple-effect" id="to-upload"><i class="material-icons" style="padding-top: 2.5vh">camera_alt</i></a>
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-            <h1 style="font-family: lazyyyfont">Vestiarium</h1>
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark orange accent-3" id="toolbar">
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect blue-grey lighten-5" id="toolbar">
             <a href="#history" class="mdl-layout__tab" id="to-saved-looks">Saved Looks</a>
             <a href="#closet" class="mdl-layout__tab is-active" id="to-all-clothes">All Clothes</a>
             <a href="#explore" class="mdl-layout__tab" id="to-explore">Explore</a>
-            <a href="/compare" class=" mdl-layout__tab"><i class="material-icons" style="padding-top: 5vw">camera_alt</i></a>
         </div>
-
     </header>
     <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel" id="history">
@@ -114,14 +95,15 @@
                 <form class="col s12">
                     <div class="row">
                         <div class="col s8">
+                          <div>
                             <h7>Here are Your Saved Looks</h7>
-                        </div>
-                        <div class="col s1"></div>
-                        <div class="col s3">
-                            <a href="/signout" id="logout"><h7>Logout</h7></a>
-                        </div>
-                        <div class="col s12">
+                          </div>
+                          <div>
                             <h7>Click each entry for more info!</h7>
+                          </div>
+                        </div>
+                        <div class="col s3">
+                          <a class="mdl-button mdl-js-button mdl-button--accent" href="/signout" id="logout">Logout</a>
                         </div>
                     </div>
                 </form>
@@ -192,14 +174,15 @@
                 <form class="col s12">
                     <div class="row">
                         <div class="col s8">
+                          <div>
                             <h7>View all your clothes here</h7>
-                        </div>
-                        <div class="col s1"></div>
-                        <div class="col s3">
-                            <a href="/signout" id="logout"><h7>Logout</h7></a>
-                        </div>
-                        <div class="col s12">
+                          </div>
+                          <div>
                             <h7>Select to make your new looks!</h7>
+                          </div>
+                        </div>
+                        <div class="col s3">
+                          <a class="mdl-button mdl-js-button mdl-button--accent" href="/signout" id="logout">Logout</a>
                         </div>
                     </div>
                 </form>
@@ -231,7 +214,7 @@
             <div id="bottom" class="card">
                 <h5>&nbsp;&nbsp;Bottom</h5>
                 <ul class="bottom list">
-                    <div class="demo-grid-ruler mdl-grid">
+                    <div class="demo-grid-ruler mdl-grid" id="bottomGrid">
                       {{#each clothes}}
                       {{#if bottom}}
                         <div class="row">
@@ -252,12 +235,12 @@
             </div>
 
 
-            <div id="one-piece" class="card">
+            <div id="one_piece" class="card">
                 <h5>&nbsp;&nbsp;One Piece</h5>
-                <ul class="one-piece list">
-                    <div class="demo-grid-ruler mdl-grid">
+                <ul class="one_piece list">
+                    <div class="demo-grid-ruler mdl-grid"  id="onePieceGrid">
                       {{#each clothes}}
-                      {{#if one-piece}}
+                      {{#if one_piece}}
                         <div class="row">
                             <div class="col">
                                 <div class="card z-depth-0">
@@ -282,14 +265,15 @@
                 <form class="col s12">
                     <div class="row">
                         <div class="col s8">
+                          <div>
                             <h7>View other users' looks</h7>
+                          </div>
+                          <div>
+                            <h7>Give it a like if you like!</h7>
+                          </div>
                         </div>
-                        <div class="col s1"></div>
                         <div class="col s3">
-                            <a href="/signout"><h7>Logout</h7></a>
-                        </div>
-                        <div class="col s12">
-                            <h7>Give it a like if you think the look is nice!</h7>
+                          <a class="mdl-button mdl-js-button mdl-button--accent" href="/signout" id="logout">Logout</a>
                         </div>
                     </div>
                 </form>
@@ -300,37 +284,32 @@
             <div class="col s12 m7">
               <div class="card">
                 <div>
-                      <div class="mdl-card mdl-cell--12-col">
-                              <form class="col s12">
-                                  <div class="row">
-                                      <div class="input-field col">
-                                          <img src="{{imageURL1}}" class="fakeitem1 explore" id="fake1">
-                                      </div>
-                                  </div>
-                              </form>
+                  <form class="col s12">
+                      <div class="row">
+                          <div class="input-field col">
+                              <img src="{{imageURL1}}" class="fakeitem1 explore" id="fake1">
+                          </div>
                       </div>
-
-
-                                    <div class="row">
-                                        <div class="input-field col l2 m2 s2"></div>
-                                        <div class="input-field col l3 m3 s3" id = "fakedata1a">
-                                            <img src="{{imageURL1}}" class="fakeitem2 onview">
-                                        </div>
-                                        <div class="input-field col l2 m2 s2"></div>
-                                        <div class="input-field col l3 m3 s3" id = "fakedata1b">
-                                            <img src="{{imageURL2}}" class="fakeitem2">
-                                        </div>
-                                        <div class="input-field col l2 m2 s2"></div>
-                                        <div class="input-field col l12 m12 s12" id = "fakedataDescription">
-                                            <h5>{{ title }}</h5>
-                                            <h7>Liked by {{like}} People!</h7>
-                                        </div>
-                                    </div>
-
+                  </form>
+                  <div class="row">
+                      <div class="input-field col l2 m2 s2"></div>
+                      <div class="input-field col l3 m3 s3" id = "fakedata1a">
+                          <img src="{{imageURL1}}" class="fakeitem2 onview">
+                      </div>
+                      <div class="input-field col l2 m2 s2"></div>
+                      <div class="input-field col l3 m3 s3" id = "fakedata1b">
+                          <img src="{{imageURL2}}" class="fakeitem2">
+                      </div>
+                      <div class="input-field col l2 m2 s2"></div>
+                      <div class="input-field col l12 m12 s12" id = "fakedataDescription">
+                          <h5>{{ title }}</h5>
+                          <h7>Liked by {{like}} People!</h7>
+                      </div>
+                  </div>
                 </div>
                 <div class="card-action">
-                  <a class="waves-effect waves-light btn skip A-Version"><i class="material-icons left">shuffle</i>NEXT</a>
-                  <a class="waves-effect waves-light btn before-like"><i class="material-icons left">favorite_border</i>LIKE</a>
+                  <a class="waves-effect waves-light btn skip A-Version pink accent-2"><i class="material-icons left">shuffle</i>NEXT</a>
+                  <a class="waves-effect waves-light btn before-like pink accent-2"><i class="material-icons left">favorite_border</i>LIKE</a>
                 </div>
               </div>
             </div>
@@ -342,7 +321,6 @@
                   <div class="col s12 m7">
                       <div class="card">
                           <div>
-                              <div class="mdl-card mdl-cell--12-col">
                                   <form class="col s12">
                                       <div class="row">
                                           <div class="input-field col">
@@ -350,9 +328,8 @@
                                           </div>
                                       </div>
                                   </form>
-                              </div>
 
-                              <a class="btn-floating btn-small alternateNext B-Version"><i class="material-icons skip">trending_flat</i></a>
+                              <a class="btn-floating btn-small alternateNext B-Version pink accent-2"><i class="material-icons skip">trending_flat</i></a>
 
                               <div class="row">
                                   <div class="input-field col l2 m2 s2"></div>
@@ -373,14 +350,19 @@
 
                           </div>
                           <div class="card-action">
-                            <a class="waves-effect waves-light btn" style="visibility: hidden"><i class="material-icons left">shuffle</i>NEXT</a>
-                              <a class="waves-effect waves-light btn before-like"><i class="material-icons left">favorite_border</i>LIKE</a>
+                            <a class="waves-effect waves-light btn pink accent-2" style="visibility: hidden"><i class="material-icons left">shuffle</i>NEXT</a>
+                              <a class="waves-effect waves-light btn before-like pink accent-2"><i class="material-icons left">favorite_border</i>LIKE</a>
                           </div>
                       </div>
                   </div>
               </div>
           {{/each}}
           {{/if}}
+          <div id="empty-message">
+            <h4>Thank you for rating them all!</h4>
+            <h4>Refresh to check out more!</h4>
+          </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
 
     </main>
@@ -395,7 +377,7 @@
 
 
 <div class="fixed-action-btn vertical" style="bottom: 5%; right: 5%; display: none;">
-    <div class="btn-floating btn-large orange accent-3">
+    <div class="btn-floating btn-large pink accent-2">
         <i class="large material-icons" id="filter">done</i>
     </div>
 </div>
