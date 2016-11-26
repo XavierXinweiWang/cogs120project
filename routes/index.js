@@ -86,30 +86,16 @@ module.exports = function(passport) {
   });
 
   /* GET home page. */
-  /*router.get('/home', isAuthenticated, function (req, res, next) {
-    data['bversion'] = true;
-    res.render('index', data);
-  });*/
-
-  /* GET alternate home page. */
-  /*router.get('/home2', isAuthenticated, function (req, res, next) {
-    data['bversion'] = false;
-    res.render('index', data);
-  });*/
-
-
-  /* GET home page. */
-  router.get('/home', function (req, res, next) {
+  router.get('/home', isAuthenticated, function (req, res, next) {
     data['bversion'] = true;
     res.render('index', data);
   });
 
   /* GET alternate home page. */
-  router.get('/home2', function (req, res, next) {
+  router.get('/home2', isAuthenticated, function (req, res, next) {
     data['bversion'] = false;
     res.render('index', data);
   });
-
 
   /* GET storage page. */
   router.get('/compare', function (req, res, next) {
