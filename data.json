@@ -86,17 +86,17 @@
 		},
 		{
 			"title": "Grey Dress",
-			"one-piece": "one-piece",
+			"one_piece": "one_piece",
 			"imageURL": "../images/5584318803_6_1_1.jpg"
 		},
 		{
 			"title": "Colorful Dress",
-			"one-piece": "one-piece",
+			"one_piece": "one_piece",
 			"imageURL": "../images/2878289015_6_1_1.jpg"
 		},
 		{
 			"title": "Black Dress",
-			"one-piece": "one-piece",
+			"one_piece": "one_piece",
 			"imageURL": "../images/1255203800_6_1_1.jpg"
 		}
 	],

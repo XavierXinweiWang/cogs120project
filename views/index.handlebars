@@ -58,6 +58,7 @@
   -->
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css" />
     <link rel="stylesheet" href="stylesheets/styles.css">
@@ -228,7 +229,7 @@
             <div id="bottom" class="card">
                 <h5>&nbsp;&nbsp;Bottom</h5>
                 <ul class="bottom list">
-                    <div class="demo-grid-ruler mdl-grid">
+                    <div class="demo-grid-ruler mdl-grid" id="bottomGrid">
                       {{#each clothes}}
                       {{#if bottom}}
                         <div class="row">
@@ -249,12 +250,12 @@
             </div>
 
 
-            <div id="one-piece" class="card">
+            <div id="one_piece" class="card">
                 <h5>&nbsp;&nbsp;One Piece</h5>
-                <ul class="one-piece list">
-                    <div class="demo-grid-ruler mdl-grid">
+                <ul class="one_piece list">
+                    <div class="demo-grid-ruler mdl-grid"  id="onePieceGrid">
                       {{#each clothes}}
-                      {{#if one-piece}}
+                      {{#if one_piece}}
                         <div class="row">
                             <div class="col">
                                 <div class="card z-depth-0">
@@ -298,31 +299,28 @@
             <div class="col s12 m7">
               <div class="card">
                 <div>
-                              <form class="col s12">
-                                  <div class="row">
-                                      <div class="input-field col">
-                                          <img src="{{imageURL1}}" class="fakeitem1 explore" id="fake1">
-                                      </div>
-                                  </div>
-                              </form>
-
-
-                                    <div class="row">
-                                        <div class="input-field col l2 m2 s2"></div>
-                                        <div class="input-field col l3 m3 s3" id = "fakedata1a">
-                                            <img src="{{imageURL1}}" class="fakeitem2 onview">
-                                        </div>
-                                        <div class="input-field col l2 m2 s2"></div>
-                                        <div class="input-field col l3 m3 s3" id = "fakedata1b">
-                                            <img src="{{imageURL2}}" class="fakeitem2">
-                                        </div>
-                                        <div class="input-field col l2 m2 s2"></div>
-                                        <div class="input-field col l12 m12 s12" id = "fakedataDescription">
-                                            <h5>{{ title }}</h5>
-                                            <h7>Liked by {{like}} People!</h7>
-                                        </div>
-                                    </div>
-
+                  <form class="col s12">
+                      <div class="row">
+                          <div class="input-field col">
+                              <img src="{{imageURL1}}" class="fakeitem1 explore" id="fake1">
+                          </div>
+                      </div>
+                  </form>
+                  <div class="row">
+                      <div class="input-field col l2 m2 s2"></div>
+                      <div class="input-field col l3 m3 s3" id = "fakedata1a">
+                          <img src="{{imageURL1}}" class="fakeitem2 onview">
+                      </div>
+                      <div class="input-field col l2 m2 s2"></div>
+                      <div class="input-field col l3 m3 s3" id = "fakedata1b">
+                          <img src="{{imageURL2}}" class="fakeitem2">
+                      </div>
+                      <div class="input-field col l2 m2 s2"></div>
+                      <div class="input-field col l12 m12 s12" id = "fakedataDescription">
+                          <h5>{{ title }}</h5>
+                          <h7>Liked by {{like}} People!</h7>
+                      </div>
+                  </div>
                 </div>
                 <div class="card-action">
                   <a class="waves-effect waves-light btn skip A-Version pink accent-2"><i class="material-icons left">shuffle</i>NEXT</a>
@@ -375,6 +373,11 @@
               </div>
           {{/each}}
           {{/if}}
+          <div id="empty-message">
+            <h4>Thank you for rating them all!</h4>
+            <h4>Refresh to check out more!</h4>
+          </div>
+
         </div>
 
     </main>

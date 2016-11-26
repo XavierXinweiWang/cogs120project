@@ -14,7 +14,13 @@ var new_look = {
 
 var selected_clothes = [];
 
-var toUpload = "";
+var toUpload = {
+  "title": "",
+  "top": "",
+  "bottom": "",
+  "one_piece": "",
+  "imageURL": ""
+};
 
 var numUploaded = 0;
 
@@ -122,6 +128,9 @@ $('#filter').click(function() {
         selected = 0;
 
         $('#filter').parent().parent().hide();
+
+        var data = {message: "Successfully added your look today!"};
+        document.querySelector('#wear-snackbar').MaterialSnackbar.showSnackbar(data);
     }
 });
 
@@ -161,12 +170,35 @@ $('.alternateNext').on('click', '.skip', function(){
 
 $('#fakeUpload').hide();
 $('#resultPercentage').hide();
-$('#upload').click(function(){
+$('#upload-confirm').click(function(){
+  if($(this).hasClass('disabled')) {
+    var data = {message: "Please select before continue."};
+    document.querySelector('#wear-snackbar').MaterialSnackbar.showSnackbar(data);
+  } else {
     $('#uploadIcon').hide();
     $('#fakeUpload').show();
     $('#uploadInstruction').hide();
     $('#resultPercentage').show();
     $('#itemsToCompare').show();
+    $('#upload').hide();
+    $('#upload-confirm').hide();
+
+    toUpload.imageURL = $('#upload').find('.onview').attr('src');
+    if(document.getElementById("title_input").value != "") {
+      toUpload.title = document.getElementById("title_input").value;
+    } else {
+      toUpload.title = $('#upload').find('.onview').attr('alt');
+    }
+    if($('#upload').find('.onview').parent().find('.category').html() == 'top') {
+      toUpload.top = 'top';
+    } else if($('#upload').find('.onview').parent().find('.category').html() == 'bottom') {
+      toUpload.bottom = 'bottom';
+    } else if($('#upload').find('.onview').parent().find('.category').html() == 'one_piece') {
+      toUpload.one_piece = 'one_piece';
+    }
+
+    $('#after-upload').html("<img src='" + toUpload.imageURL + "' id='fakeUpload'>");
+  }
 });
 
 $('#cancel').click(function(){
@@ -175,6 +207,8 @@ $('#cancel').click(function(){
     $('#uploadInstruction').show();
     $('#resultPercentage').hide();
     $('#itemsToCompare').hide();
+    $('#upload').show();
+    $('#upload-confirm').show();
 });
 
 $(".fakeitem2").click(function() {
@@ -182,6 +216,12 @@ $(".fakeitem2").click(function() {
     $(this).addClass("onview");
     if($(this).parent().parent().attr('id') == 'itemsToCompare') {
       $('#resultPercentage').find('h5').show();
+    }
+    if($(this).parent().parent().attr('id') == 'upload') {
+      $('#upload-confirm').removeClass('disabled');
+      if(document.getElementById("title_input").value != "") {
+        toUpload.title = document.getElementById("title_input").value;
+      }
     }
 });
 
@@ -191,10 +231,14 @@ $('#collection').on('click', '.fakeitem2', function() {
 });
 
 $("#addCloth").click(function() {
-    toUpload = "../images/rockmui_aloneteewhite-1000x1000.jpg";
-    localStorage.setItem("toUpload", toUpload);
-
     numUploaded = localStorage.getItem("numUploaded");
+
+    localStorage.setItem("toUploadimageURL" + numUploaded, toUpload.imageURL);
+    localStorage.setItem("toUploadtitle" + numUploaded, toUpload.title);
+    localStorage.setItem("toUploadtop" + numUploaded, toUpload.top);
+    localStorage.setItem("toUploadbottom" + numUploaded, toUpload.bottom);
+    localStorage.setItem("toUploadonePiece" + numUploaded, toUpload.one_piece);
+
     if(numUploaded == null) {
         numUploaded = 0;
     }
@@ -205,15 +249,86 @@ $("#addCloth").click(function() {
 
 $("index").ready(function(){
     var numUploadedX = localStorage.getItem("numUploaded");
+    var toUploadimageURL = [numUploadedX];
+    var toUploadtitle = [numUploadedX];
+    var toUploadtop = [numUploadedX];
+    var toUploadbottom = [numUploadedX];
+    var toUploadonePiece = [numUploadedX];
 
     for (var i = 0; i < numUploadedX; i++) {
+      toUploadimageURL[i] = localStorage.getItem("toUploadimageURL" + i);
+      toUploadtitle[i] = localStorage.getItem("toUploadtitle" + i);
+      toUploadtop[i] = localStorage.getItem("toUploadtop" + i);
+      toUploadbottom[i] = localStorage.getItem("toUploadbottom" + i);
+      toUploadonePiece[i] = localStorage.getItem("toUploadonePiece" + i);
+    }
+
+    for (var i = 0; i < numUploadedX; i++) {
+      if(toUploadtop[i] == "top") {
         $("#topGrid").prepend(
-            "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image new'> <p style='display: none'>Black Text Tee</p> <img src='../images/rockmui_aloneteewhite-1000x1000.jpg'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
+            "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image new'> <p style='display: none'>" + toUploadtitle[i] + "</p> <img src='" + toUploadimageURL[i] + "'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
         );
+      } else if(toUploadbottom[i] == "bottom") {
+        $("#bottomGrid").prepend(
+            "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image new'> <p style='display: none'>" + toUploadtitle[i] + "</p> <img src='" + toUploadimageURL[i] + "'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
+        );
+      } else if(toUploadonePiece[i] == "one_piece") {
+        $("#onePieceGrid").prepend(
+            "<div class='row'> <div class='col'> <div class='card z-depth-0'> <div class='card-image new'> <p style='display: none'>" + toUploadtitle[i] + "</p> <img src='" + toUploadimageURL[i] + "'> <i class='material-icons check-icon' style='display: none'>check_circle</i> </div> </div> </div> </div>"
+        );
+      }
     }
 });
 
 $('#topGrid').on('click', '.card-image.new', function() {
+    $(this).find('i').toggle();
+
+    if($(this).find('i').attr("style") == "display: none;") {
+        for (var i = 0; i < selected_clothes.length; i++) {
+            if (selected_clothes[i].title == $(this).find('p').text()) {
+                selected_clothes.splice(i, 1);
+            }
+        }
+        selected--;
+    } else {
+        selected_clothes.push(
+            {"title" : $(this).find('p').text(), "imageURL" : $(this).find('img').attr("src")}
+        );
+        selected++;
+    }
+
+    if (selected == 0) {
+        $('#filter').parent().parent().hide();
+    } else {
+        $('#filter').parent().parent().show();
+    }
+});
+
+$('#bottomGrid').on('click', '.card-image.new', function() {
+    $(this).find('i').toggle();
+
+    if($(this).find('i').attr("style") == "display: none;") {
+        for (var i = 0; i < selected_clothes.length; i++) {
+            if (selected_clothes[i].title == $(this).find('p').text()) {
+                selected_clothes.splice(i, 1);
+            }
+        }
+        selected--;
+    } else {
+        selected_clothes.push(
+            {"title" : $(this).find('p').text(), "imageURL" : $(this).find('img').attr("src")}
+        );
+        selected++;
+    }
+
+    if (selected == 0) {
+        $('#filter').parent().parent().hide();
+    } else {
+        $('#filter').parent().parent().show();
+    }
+});
+
+$('#onePieceGrid').on('click', '.card-image.new', function() {
     $(this).find('i').toggle();
 
     if($(this).find('i').attr("style") == "display: none;") {

@@ -482,6 +482,7 @@ section div #form.mdl-card.mdl-cell.mdl-cell--12-col {
 }
 
 #to-upload {
+  display: inline-block;
   position: fixed;
   right: 5vw;
 }
@@ -513,4 +514,44 @@ h2.mdl-layout__header-row {
 
 #compare {
   padding-top: 3vw;
+}
+
+
+#upload-input {
+  display: inline-block;
+  position: fixed;
+  right: 5vw;
+  width: 48px;
+  height: 48px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#upload-input input {
+  padding-top: 2.5vh;
+  width: 24px;
+  height: 24px;
+}
+
+#empty-message {
+  display: block;
+  text-align: center;
+  width: 62vw;
+  margin: 19vw;
+}
+
+#upload-confirm {
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: -10px;
+}
+
+.is-focused #title_input {
+  border-bottom-color: #ff4081 !important;
+  box-shadow: 0 1px 0 0 #ff4081 !important;
+}
+
+.is-focused label {
+  color: #ff4081 !important;
 }
